@@ -1,0 +1,112 @@
+*{
+  background-color: #303c6c;
+}
+
+.navbar{
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+/*
+.buttonAnimated{
+  color: #d2fdff;
+  border: none;
+  cursor: pointer;
+  min-width: 6em;
+  min-height: 3em;
+  font-size: 2em;
+  background-color: var(--background-color);
+
+  --border-size: 2px;
+  --accent-color: #d2fdff;
+}
+*/
+/*.navbarButton > button:hover{
+  background-color: #d2fdff;
+  color: #303c6c
+}*/
+
+.buttonAnimated{
+  position: relative;
+  color: #d2fdff;
+  border: none;
+  cursor: pointer;
+  min-width: 6em;
+  min-height: 1em;
+  font-size: 2em;
+  background-color: var(--background-color);
+  margin-top: 1em;
+
+  --border-size: 2px;
+  --accent-color: #d2fdff;
+}
+
+.buttonAnimated::before{
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: var(--border-size);
+  background-color: var(--accent-color);
+  transition: transform 200ms ease-in-out;
+
+  transform: scaleX(0);
+}
+
+.buttonAnimated:hover::before,
+.buttonAnimated:focus::before{
+  transform: scaleX(1)
+}
+
+
+.container {
+  max-width: 1536px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+/* 2xl */
+@media (max-width: 1536px) {
+  .container {
+    max-width: 1280px;
+  }
+}
+
+/* xl */
+@media (max-width: 1280px) {
+  .container {
+    max-width: 1024px;
+  }
+}
+
+/* lg */
+@media (max-width: 1024px) {
+  .container {
+    max-width: 768px;
+  }
+}
+
+/* md */
+@media (max-width: 768px) {
+  .container {
+    max-width: 640px;
+  }
+}
+
+/* sm */
+@media (max-width: 640px) {
+  .container {
+    max-width: 475px;
+  }
+}
+
+/* xs */
+@media (max-width: 475px) {
+  .container {
+    width: 100%;
+  }
+}
