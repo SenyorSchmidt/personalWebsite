@@ -3,10 +3,20 @@ import unitedKingdom from "../symbols/unitedKingdom.png"
 import germany from "../symbols/germany.png"
 import { useLanguage } from "../context/languageProvider";
 
-const Navbar = () => {
-    const { language, changeLanguage} = useLanguage()
+const buttonText = {
+    en: ["About Me",
+        "Skills",
+        "Contact Me"],
+    ger: ["Über mich",
+        "Skills",
+        "Kontakt"],
+}
 
-    const handleClick = (anchor) => (e) =>{
+
+const Navbar = () => {
+    const { language, changeLanguage } = useLanguage()
+
+    const handleClick = (anchor) => (e) => {
         e.preventDefault()
         const id = `${anchor}-section`;
         const element = document.getElementById(id);
@@ -18,25 +28,21 @@ const Navbar = () => {
         }
     }
 
-    return(
+    return (
         <>
-        <div className="navbar">
-            <div className="navbarButton">
-            <button onClick={handleClick("aboutme")} className="buttonAnimated">About Me</button>
+            <div className="navbar">
+                {buttonText[language].map((text, index) =>
+                    <div className="navbarButton">
+                        <button key={index} onClick={handleClick(text)} className="buttonAnimated">{text}</button>
+                    </div>
+                )}
             </div>
-            <div className="navbarButton">
-                <button onClick={handleClick("skills")} className="buttonAnimated">Skills</button>
+            <div className="languageSelection">
+                <img className="languageSelector" src={unitedKingdom} onClick={() => changeLanguage("en")}></img>
+                <img className="languageSelector" src={germany} onClick={() => changeLanguage("ger")}></img>
             </div>
-            <div className="navbarButton">
-                <button onClick={handleClick("contact")} className="buttonAnimated">Contact Me</button>
-            </div>
-        </div>
-        <div className="languageSelection">
-            <img className="languageSelector" src={unitedKingdom} onClick={() => changeLanguage("en")}></img>
-            <img className="languageSelector" src={germany} onClick={() => changeLanguage("ger")}></img>
-        </div>
         </>
-        )
+    )
 }
 
 export default Navbar

@@ -62,7 +62,7 @@
 }
 
 .languageSelection{
-  display: flex;  
+  display: flex;
   justify-content: end;
 }
 
@@ -81,11 +81,15 @@
   border: 1px solid red;
 }
 
+.myPicture{
+  padding-left: 2rem;
+}
+
 .myDescription{
   margin-left: 1em;
   border: 1px solid red;
   position: relative;
-  min-width: 5em;
+
   color: #d2fdff;
 }
 
