@@ -1,18 +1,11 @@
-import {useState} from "react";
-
-const buttonsNavbar = [
-    {
-        name: "About Me"
-    },
-    {
-        name: "Skills"
-    },
-    {
-        name: "Contact"
-    }
-]
+import React from "react";
+import unitedKingdom from "../symbols/unitedKingdom.png"
+import germany from "../symbols/germany.png"
+import { useLanguage } from "../context/languageProvider";
 
 const Navbar = () => {
+    const { language, changeLanguage} = useLanguage()
+
     const handleClick = (anchor) => (e) =>{
         e.preventDefault()
         const id = `${anchor}-section`;
@@ -26,6 +19,7 @@ const Navbar = () => {
     }
 
     return(
+        <>
         <div className="navbar">
             <div className="navbarButton">
             <button onClick={handleClick("aboutme")} className="buttonAnimated">About Me</button>
@@ -37,7 +31,12 @@ const Navbar = () => {
                 <button onClick={handleClick("contact")} className="buttonAnimated">Contact Me</button>
             </div>
         </div>
-    )
+        <div className="languageSelection">
+            <img className="languageSelector" src={unitedKingdom} onClick={() => changeLanguage("en")}></img>
+            <img className="languageSelector" src={germany} onClick={() => changeLanguage("ger")}></img>
+        </div>
+        </>
+        )
 }
 
 export default Navbar

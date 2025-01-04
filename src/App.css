@@ -7,6 +7,7 @@
   text-align: center;
   justify-content: center;
   align-items: center;
+  border: 1px solid red;
 }
 /*
 .buttonAnimated{
@@ -58,6 +59,34 @@
 .buttonAnimated:hover::before,
 .buttonAnimated:focus::before{
   transform: scaleX(1)
+}
+
+.languageSelection{
+  display: flex;  
+  justify-content: end;
+}
+
+.languageSelector{
+  max-width: 2em;
+  margin-left: 0.5em;
+  margin-right: 0.5em;
+  cursor: pointer;
+}
+
+.aboutme{
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin-top: 2rem;
+  border: 1px solid red;
+}
+
+.myDescription{
+  margin-left: 1em;
+  border: 1px solid red;
+  position: relative;
+  min-width: 5em;
+  color: #d2fdff;
 }
 
 
