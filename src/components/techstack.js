@@ -3,6 +3,13 @@ import { useLanguage } from "../context/languageProvider";
 import reactSymbol from "../symbols/react.png"
 import htmlCssJsSymbol from "../symbols/htmlCssJs.png"
 
+/**dict with nested arrays depending on the language detailing my techstack consisting of:
+ * - react
+ * - HTML/CSS/JS
+ * - Three.js (in progress of learning)
+ *  - GSAP (in progress of learning)
+*/
+// TODO: finish descriptions for techstack in both languages, find symbols
 const techStack = {
     en: [
         [
@@ -50,6 +57,7 @@ const techStack = {
     ]
 }
 
+// dict for headertext depending on language
 const header =  {
     en: "My Techstack",
     ger: "Mein Techstack"
@@ -61,7 +69,8 @@ const Techstack = () => {
 
     return (
         <div className="container">
-        <div className="techsackheader"><h1>{header[language]}</h1></div>
+        <div className="techstackheader"><h1>{header[language]}</h1></div>
+        {/**mapping over the dict techStack to select fitting symbol, name and description of technology */}
         <div className="techstack">
             {techStack[language].map((text, index) =>
                 <div className="techstacktile">
