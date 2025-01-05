@@ -22,7 +22,7 @@ const AboutMe = () => {
     const { language } = useLanguage()
 
     return (
-        <>
+        <div className="container">
             <div className="aboutMeHeader">
                 {textAboutMe[language][0]}
             </div>
@@ -40,7 +40,7 @@ const AboutMe = () => {
                     </p>
                 </div>
             </div>
-        </>
+        </div>
     )
 }
 

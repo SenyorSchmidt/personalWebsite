@@ -60,7 +60,7 @@ const Techstack = () => {
     const { language } = useLanguage()
 
     return (
-        <>
+        <div className="container">
         <div className="techsackheader"><h1>{header[language]}</h1></div>
         <div className="techstack">
             {techStack[language].map((text, index) =>
@@ -71,7 +71,7 @@ const Techstack = () => {
                 </div>
             )}
         </div>
-        </>
+        </div>
     )
 }
 
