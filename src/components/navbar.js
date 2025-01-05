@@ -5,10 +5,10 @@ import { useLanguage } from "../context/languageProvider";
 
 const buttonText = {
     en: ["About Me",
-        "Skills",
+        "Tech Stack",
         "Contact Me"],
     ger: ["Über mich",
-        "Skills",
+        "Technologien",
         "Kontakt"],
 }
 
