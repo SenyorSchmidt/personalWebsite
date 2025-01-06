@@ -52,7 +52,7 @@ h1{
   margin-top: 1em;
 
   --border-size: 2px;
-  --accent-color: #d2fdff;
+  --accent-color: #F4976c;
 }
 
 .buttonAnimated::before{
@@ -150,12 +150,14 @@ h1{
   justify-content: center;
 }
 
+/*Maybe use shadow with light color to make visual more appealing?*/
 .techstacktile{
   border: 1px solid red;
   width:33%;
   padding-left: 5%;
   padding-right: 5%;
-  padding-top: 2.5%
+  padding-top: 2.5%;
+  box-shadow: #F4976c 0px 8px 20px, #F4976c 0px 16px 56px, #F4976c 0px 24px 80px;
 }
 
 .techstacktilepicture{
@@ -211,6 +213,14 @@ h1{
   .burgerlist.active{
     display: flex;
   }
+  .aboutme{
+    flex-wrap: wrap;
+    flex-shrink: 0;
+  }
+  .techstack{
+    flex-wrap: wrap;
+    flex-shrink: 0;
+  }
 }
 
 /* sm */
@@ -230,6 +240,16 @@ h1{
   .burgerlist.active{
     display: flex;
   }
+  .aboutme{
+    flex-wrap: wrap;
+    flex-shrink: 0;
+
+  }
+  .techstack{
+    flex-wrap: wrap;
+    flex-shrink: 0;
+
+  }
 }
 
 /* xs */
@@ -248,5 +268,15 @@ h1{
   }
   .burgerlist.active{
     display: flex;
+  }
+  .aboutme{
+    flex-wrap: wrap;
+    flex-shrink: 0;
+
+  }
+  .techstack{
+    flex-wrap: wrap;
+    flex-shrink: 0;
+
   }
 }
