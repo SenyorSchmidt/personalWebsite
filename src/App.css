@@ -1,29 +1,29 @@
-*{
+* {
   background-color: #020318;
 }
 
-h1{
-  color:#d2fdff;
+h1 {
+  color: #d2fdff;
   text-align: center;
-  margin-bottom: 0px;
   margin-top: 2rem;
-  
+
 }
 
 
-.mainContainer{
- /* background-image: url("./pictures/background.jpg");
+.mainContainer {
+  /* background-image: url("./pictures/background.jpg");
   background-size:cover ;
   background-repeat: no-repeat;*/
   background-color: #020318;
 }
 
-.navbar{
+.navbar {
   display: flex;
   text-align: center;
   justify-content: center;
   align-items: center;
 }
+
 /*
 .buttonAnimated{
   color: #d2fdff;
@@ -43,7 +43,7 @@ h1{
   color: #303c6c
 }*/
 
-.buttonAnimated{
+.buttonAnimated {
   position: relative;
   color: #d2fdff;
   border: none;
@@ -58,7 +58,7 @@ h1{
   --accent-color: #F4976c;
 }
 
-.buttonAnimated::before{
+.buttonAnimated::before {
   content: "";
   position: absolute;
   left: 0;
@@ -72,107 +72,138 @@ h1{
 }
 
 .buttonAnimated:hover::before,
-.buttonAnimated:focus::before{
+.buttonAnimated:focus::before {
   transform: scaleX(1)
 }
 
-.languageSelection{
+.languageSelection {
   display: flex;
   justify-content: end;
 }
 
-.languageSelector{
+.languageSelector {
   max-width: 2em;
   margin-left: 0.5em;
   margin-right: 0.5em;
   cursor: pointer;
 }
 
-
-.burgermenu{
+.burgermenu {
   display: none;
   font-size: 2rem;
-  background:none;
+  background: none;
   border: none;
   color: white;
   text-align: end;
 }
 
-.burgerbutton{
-  color:#d2fdff;
+.burgerbutton {
+  color: #d2fdff;
   background-color: #020318;
   border: none;
   font-size: 1em;
-  cursor:pointer;
+  cursor: pointer;
   text-align: end;
 }
 
-.burgerlist{
+.burgerlist {
   display: flex;
   list-style: none;
   color: #01071d;
   font-size: 0.5em;
-  justify-content: end;
+  justify-content: center;
   padding-right: 0.5em;
   background-color: #d2fdff;
 }
 
-.burgerlist > li{
+.burgerlist>li {
   background-color: #d2fdff;
-
 }
 
-.burgerdiv{
+.burgerdiv {
   position: fixed;
   background-color: #d2fdff;
   border-radius: 16px;
   padding-right: 0.5em;
-  box-shadow: -2px 0 5px #d2fdff;
   z-index: 1000;
+  box-shadow: -2px 0 5px #d2fdff;
   right: 0em;
   background-color: #d2fdff;
-  height: 100%
+  /* Smooth opening animation */
+  transform: translateX(100%);
+  /* Initially off-screen */
 }
 
-.aboutme{
+
+/* Active state */
+.burgerdivactive {
+  display: block;
+  animation: slideIn 0.5s forwards;
+  position: fixed;
+  background-color: #d2fdff;
+  border-radius: 16px;
+  padding-right: 0.5em;
+  z-index: 1000;
+  background-color: #d2fdff;
+  right: 1em;
+}
+
+@keyframes slideOut {
+  from {
+    transform: translateY(-1em);
+  }
+  to {
+    transform: translateY(-2em);
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(-2em);
+  }
+  to {
+    transform: translateY(-1em);
+  }
+}
+
+.aboutme {
   display: flex;
   justify-content: center;
   text-align: center;
 }
 
-.myPicture{
+.myPicture {
   margin-right: 0.5em;
   flex-shrink: 0;
 }
 
-.myDescription{
+.myDescription {
   margin-left: 0.5em;
   position: relative;
   max-width: 20em;
   color: #d2fdff;
   flex-shrink: 0;
-
 }
 
-.techstack{
-  color:#d2fdff;
+.techstack {
+  color: #d2fdff;
   display: flex;
   justify-content: center;
 }
 
 /*Maybe use shadow with light color to make visual more appealing?
 TODO: Test more shadows!*/
-.techstacktile{
+.techstacktile {
 
-  width:33%;
+  width: 33%;
   padding-left: 5%;
   padding-right: 5%;
   padding-top: 2.5%;
 }
 
-.techstacktilepicture{
+.techstacktilepicture {
   width: 5em;
-  border-radius:  16px;
+  border-radius: 16px;
 }
 
 .container {
@@ -210,23 +241,29 @@ TODO: Test more shadows!*/
     max-width: 640px;
     padding: 0;
   }
-  .navbar{
+
+  .navbar {
     display: none;
   }
-  .burgermenu{
-    display:block;
+
+  .burgermenu {
+    display: block;
   }
-  .burgerlist{
-    display:none
+
+  .burgerlist {
+    display: none
   }
-  .burgerlist.active{
+
+  .burgerlist.active {
     display: flex;
   }
-  .aboutme{
+
+  .aboutme {
     flex-wrap: wrap;
     flex-shrink: 0;
   }
-  .techstack{
+
+  .techstack {
     flex-wrap: wrap;
     flex-shrink: 0;
   }
@@ -239,29 +276,36 @@ TODO: Test more shadows!*/
     padding: 0;
 
   }
-  .navbar{
+
+  .navbar {
     display: none;
   }
-  .burgermenu{
-    display:block;
+
+  .burgermenu {
+    display: block;
   }
-  .burgerlist{
-    display:none
+
+  .burgerlist {
+    display: none
   }
-  .burgerlist.active{
+
+  .burgerlist.active {
     display: flex;
   }
-  .aboutme{
+
+  .aboutme {
     flex-wrap: wrap;
     flex-shrink: 0;
 
   }
-  .techstack{
+
+  .techstack {
     flex-wrap: wrap;
     flex-shrink: 0;
 
   }
-  .techstacktile{
+
+  .techstacktile {
     flex-shrink: 0;
 
   }
@@ -274,24 +318,30 @@ TODO: Test more shadows!*/
     padding: 0;
 
   }
-  .navbar{
+
+  .navbar {
     display: none;
   }
-  .burgermenu{
-    display:block;
+
+  .burgermenu {
+    display: block;
   }
-  .burgerlist{
-    display:none
+
+  .burgerlist {
+    display: none
   }
-  .burgerlist.active{
+
+  .burgerlist.active {
     display: flex;
   }
-  .aboutme{
+
+  .aboutme {
     flex-wrap: wrap;
     flex-shrink: 0;
 
   }
-  .techstack{
+
+  .techstack {
     flex-wrap: wrap;
     flex-shrink: 0;
 

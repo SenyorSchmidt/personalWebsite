@@ -56,12 +56,12 @@ const Navbar = () => {
                     <img className="languageSelector" src={germany} onClick={() => changeLanguage("ger")}></img>
                 </div>
                 {/*Burgermenu div with mapping of the same buttonText array to easily add or delete buttons.
-                individual items are li in an ul, instead of buttons like in the regular navbar */}
+                individual items are li in an ul, instead of buttons like in the regular navbar.*/}
                 <div className="burgermenu">
                     <button className="burgerbutton" aria-label="Toggle Navigation" onClick={toggleMenu}>
                         ☰
                     </button>
-                    <div className="burgerdiv">
+                    <div className={`burgerdiv${isMenuOpen ? "active" : ""}`}>
                         {buttonText[language].map((text, index) =>
                             <ul className={`burgerlist ${isMenuOpen ? "active" : ""}`}>
                                 <li key={index} onClick={handleClick(text)} >{text}</li>
