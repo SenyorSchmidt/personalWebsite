@@ -39,7 +39,6 @@ const Navbar = () => {
         setIsMenuOpen()
     }
 
-    //mapping in 
     return (
         <>
             <div className="container">

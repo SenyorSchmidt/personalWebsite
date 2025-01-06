@@ -1,17 +1,21 @@
-
+*{
+  background-color: #020318;
+}
 
 h1{
   color:#d2fdff;
   text-align: center;
   margin-bottom: 0px;
   margin-top: 2rem;
+  
 }
+
 
 .mainContainer{
  /* background-image: url("./pictures/background.jpg");
   background-size:cover ;
   background-repeat: no-repeat;*/
-  background-color: #01071d;
+  background-color: #020318;
 }
 
 .navbar{
@@ -19,7 +23,6 @@ h1{
   text-align: center;
   justify-content: center;
   align-items: center;
-  border: 1px solid red;
 }
 /*
 .buttonAnimated{
@@ -85,6 +88,7 @@ h1{
   cursor: pointer;
 }
 
+
 .burgermenu{
   display: none;
   font-size: 2rem;
@@ -92,12 +96,11 @@ h1{
   border: none;
   color: white;
   text-align: end;
-
 }
 
 .burgerbutton{
   color:#d2fdff;
-  background-color: #01071d;
+  background-color: #020318;
   border: none;
   font-size: 1em;
   cursor:pointer;
@@ -111,6 +114,12 @@ h1{
   font-size: 0.5em;
   justify-content: end;
   padding-right: 0.5em;
+  background-color: #d2fdff;
+}
+
+.burgerlist > li{
+  background-color: #d2fdff;
+
 }
 
 .burgerdiv{
@@ -118,51 +127,51 @@ h1{
   background-color: #d2fdff;
   border-radius: 16px;
   padding-right: 0.5em;
-  z-index: 1000;
   box-shadow: -2px 0 5px #d2fdff;
+  z-index: 1000;
   right: 0em;
+  background-color: #d2fdff;
+  height: 100%
 }
 
 .aboutme{
   display: flex;
   justify-content: center;
   text-align: center;
-  border: 1px solid red;
 }
 
 .myPicture{
-  border: 1px solid red;
   margin-right: 0.5em;
+  flex-shrink: 0;
 }
 
 .myDescription{
   margin-left: 0.5em;
-  border: 1px solid red;
   position: relative;
   max-width: 20em;
   color: #d2fdff;
+  flex-shrink: 0;
+
 }
 
 .techstack{
-  border: 1px solid red;
   color:#d2fdff;
   display: flex;
   justify-content: center;
 }
 
-/*Maybe use shadow with light color to make visual more appealing?*/
+/*Maybe use shadow with light color to make visual more appealing?
+TODO: Test more shadows!*/
 .techstacktile{
-  border: 1px solid red;
+
   width:33%;
   padding-left: 5%;
   padding-right: 5%;
   padding-top: 2.5%;
-  box-shadow: #F4976c 0px 8px 20px, #F4976c 0px 16px 56px, #F4976c 0px 24px 80px;
 }
 
 .techstacktilepicture{
   width: 5em;
-  color: #d2fdff;
   border-radius:  16px;
 }
 
@@ -170,9 +179,8 @@ h1{
   max-width: 1536px;
   margin-left: auto;
   margin-right: auto;
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
-  border: 1px solid green;
+  padding-left: 1em;
+  padding-right: 1em;
 }
 
 /* 2xl */
@@ -200,6 +208,7 @@ h1{
 @media (max-width: 768px) {
   .container {
     max-width: 640px;
+    padding: 0;
   }
   .navbar{
     display: none;
@@ -227,6 +236,8 @@ h1{
 @media (max-width: 640px) {
   .container {
     max-width: 475px;
+    padding: 0;
+
   }
   .navbar{
     display: none;
@@ -250,12 +261,18 @@ h1{
     flex-shrink: 0;
 
   }
+  .techstacktile{
+    flex-shrink: 0;
+
+  }
 }
 
 /* xs */
 @media (max-width: 475px) {
   .container {
     width: 100%;
+    padding: 0;
+
   }
   .navbar{
     display: none;
