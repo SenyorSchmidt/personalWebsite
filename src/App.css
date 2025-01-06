@@ -24,25 +24,6 @@ h1 {
   align-items: center;
 }
 
-/*
-.buttonAnimated{
-  color: #d2fdff;
-  border: none;
-  cursor: pointer;
-  min-width: 6em;
-  min-height: 3em;
-  font-size: 2em;
-  background-color: var(--background-color);
-
-  --border-size: 2px;
-  --accent-color: #d2fdff;
-}
-*/
-/*.navbarButton > button:hover{
-  background-color: #d2fdff;
-  color: #303c6c
-}*/
-
 .buttonAnimated {
   position: relative;
   color: #d2fdff;
@@ -129,13 +110,11 @@ h1 {
   box-shadow: -2px 0 5px #d2fdff;
   right: 0em;
   background-color: #d2fdff;
-  /* Smooth opening animation */
   transform: translateX(100%);
-  /* Initially off-screen */
 }
 
 
-/* Active state */
+/* burgermenu open */
 .burgerdivactive {
   display: block;
   animation: slideIn 0.5s forwards;
@@ -148,6 +127,9 @@ h1 {
   right: 1em;
 }
 
+/* **TODO: Add closing button or figure out way that menu closes by clicking anywhere**  */
+
+/* Slide out animation. Probably won't work, since the .burgerdivactive class is not active as soon as the menu closes*/
 @keyframes slideOut {
   from {
     transform: translateY(-1em);
@@ -191,8 +173,7 @@ h1 {
   justify-content: center;
 }
 
-/*Maybe use shadow with light color to make visual more appealing?
-TODO: Test more shadows!*/
+/*Maybe use shadow with light color to make visual more appealing?*/
 .techstacktile {
 
   width: 33%;

@@ -9,7 +9,7 @@ import htmlCssJsSymbol from "../symbols/htmlCssJs.png"
  * - Three.js (in progress of learning)
  *  - GSAP (in progress of learning)
 */
-// TODO: finish descriptions for techstack in both languages, find symbols
+// ** TODO: finish descriptions for techstack in both languages, find symbols **
 const techStack = {
     en: [
         [

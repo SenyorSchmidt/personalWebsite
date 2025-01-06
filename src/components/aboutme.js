@@ -3,7 +3,7 @@ import React from "react"
 import { useLanguage } from "../context/languageProvider"
 
 //dict with arrays for the text used in the About Me Header and the description
-// TODO: finish description and find a proper picture!!!
+// ** TODO: finish description and find a proper picture!!! **
 const textAboutMe = {
     en: [
         <h1>About me</h1>,

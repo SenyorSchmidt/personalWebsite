@@ -56,7 +56,11 @@ const Navbar = () => {
                     <img className="languageSelector" src={germany} onClick={() => changeLanguage("ger")}></img>
                 </div>
                 {/*Burgermenu div with mapping of the same buttonText array to easily add or delete buttons.
-                individual items are li in an ul, instead of buttons like in the regular navbar.*/}
+                individual items are li in an ul, instead of buttons like in the regular navbar.
+                
+                **TODO: Add closing button or figure out way that menu closes by clicking anywhere** 
+                
+                */}
                 <div className="burgermenu">
                     <button className="burgerbutton" aria-label="Toggle Navigation" onClick={toggleMenu}>
                         ☰
