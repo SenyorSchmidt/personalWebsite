@@ -58,9 +58,9 @@ const techStack = {
 }
 
 // dict for headertext depending on language
-const header =  {
-    en: "My Techstack",
-    ger: "Mein Techstack"
+const header = {
+    en: "Tech Stack",
+    ger: "Technologien"
 }
 
 
@@ -68,18 +68,18 @@ const Techstack = () => {
     const { language } = useLanguage()
 
     return (
-        <div className="container">
-        <div className="techstackheader"><h1>{header[language]}</h1></div>
-        {/**mapping over the dict techStack to select fitting symbol, name and description of technology */}
-        <div className="techstack">
-            {techStack[language].map((text, index) =>
-                <div className="techstacktile">
-                    <img className="techstacktilepicture" src={text[1]}></img>
-                    <p>{text[0]}</p>
-                    <p>{text[2]}</p>
-                </div>
-            )}
-        </div>
+        <div className="container" id={header[language]}>
+            <div className="techstackheader"><h1>{header[language]}</h1></div>
+            {/**mapping over the dict techStack to select fitting symbol, name and description of technology */}
+            <div className="techstack">
+                {techStack[language].map((text, index) =>
+                    <div className="techstacktile">
+                        <img className="techstacktilepicture" src={text[1]}></img>
+                        <p>{text[0]}</p>
+                        <p>{text[2]}</p>
+                    </div>
+                )}
+            </div>
         </div>
     )
 }

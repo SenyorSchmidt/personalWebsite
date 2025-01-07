@@ -27,7 +27,7 @@ const Navbar = () => {
     //handleClick to find the element on the website and scroll into view
     const handleClick = (anchor) => (e) => {
         e.preventDefault()
-        const id = `${anchor}-section`;
+        const id = `${anchor}`;
         const element = document.getElementById(id);
         if (element) {
             element.scrollIntoView({
@@ -36,7 +36,7 @@ const Navbar = () => {
             });
         }
         //closes the burgermenu after selecting the wanted section
-        setIsMenuOpen()
+        setIsMenuOpen();
     }
 
     return (
@@ -65,7 +65,6 @@ const Navbar = () => {
                     <div className={`burgerdiv${isMenuOpen ? "active" : ""}`}>
                         <button className="burgerclosingbutton" onClick={toggleMenu}>x</button>
                         {buttonText[language].map((text, index) =>
-                        
                             <ul className={`burgerlist ${isMenuOpen ? "active" : ""}`}>
                                 <li key={index} onClick={handleClick(text)} >{text}</li>
                             </ul>

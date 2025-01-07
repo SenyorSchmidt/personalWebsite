@@ -21,6 +21,7 @@ h1 {
   text-align: center;
   justify-content: center;
   align-items: center;
+
 }
 
 .buttonAnimated {
@@ -118,7 +119,7 @@ h1 {
   box-shadow: -2px 0 5px #d2fdff;
   right: 0em;
   background-color: #d2fdff;
-  transform: translateX(100%);
+  transform: translateX(120%);
 }
 
 /* burgermenu open */

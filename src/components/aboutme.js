@@ -24,7 +24,7 @@ const AboutMe = () => {
     const { language } = useLanguage()
 
     return (
-        <div className="container">
+        <div className="container" id={textAboutMe[language]}>
             {/** selects the first item from the textAboutMe dict, depenting on the language to show the header text.
              * language is selected through the navbar. State is given to Language selector and the state is imported*/}
             <div className="aboutMeHeader">
