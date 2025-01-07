@@ -43,6 +43,7 @@ const AboutMe = () => {
                     </p>
                 </div>
             </div>
+
         </div>
     )
 }

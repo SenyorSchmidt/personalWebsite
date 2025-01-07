@@ -9,7 +9,6 @@ h1 {
 
 }
 
-
 .mainContainer {
   /* background-image: url("./pictures/background.jpg");
   background-size:cover ;
@@ -87,6 +86,15 @@ h1 {
   text-align: end;
 }
 
+.burgerclosingbutton{
+  color: #020318;
+  background-color:  #d2fdff;
+  border: none;
+  font-size: 1em;
+  cursor: pointer;
+  text-align: end;
+}
+
 .burgerlist {
   display: flex;
   list-style: none;
@@ -113,7 +121,6 @@ h1 {
   transform: translateX(100%);
 }
 
-
 /* burgermenu open */
 .burgerdivactive {
   display: block;
@@ -128,7 +135,6 @@ h1 {
 }
 
 /* **TODO: Add closing button or figure out way that menu closes by clicking anywhere**  */
-
 /* Slide out animation. Probably won't work, since the .burgerdivactive class is not active as soon as the menu closes*/
 @keyframes slideOut {
   from {
@@ -165,6 +171,7 @@ h1 {
   max-width: 20em;
   color: #d2fdff;
   flex-shrink: 0;
+  text-align: center;
 }
 
 .techstack {
@@ -244,6 +251,10 @@ h1 {
     flex-shrink: 0;
   }
 
+  .myDescription{
+    text-align: center;
+  }
+
   .techstack {
     flex-wrap: wrap;
     flex-shrink: 0;
@@ -277,18 +288,19 @@ h1 {
   .aboutme {
     flex-wrap: wrap;
     flex-shrink: 0;
+  }
 
+  .myDescription{
+    text-align: center;
   }
 
   .techstack {
     flex-wrap: wrap;
     flex-shrink: 0;
-
   }
 
   .techstacktile {
     flex-shrink: 0;
-
   }
 }
 
@@ -297,7 +309,6 @@ h1 {
   .container {
     width: 100%;
     padding: 0;
-
   }
 
   .navbar {
@@ -319,12 +330,14 @@ h1 {
   .aboutme {
     flex-wrap: wrap;
     flex-shrink: 0;
+  }
 
+  .myDescription{
+    text-align: center;
   }
 
   .techstack {
     flex-wrap: wrap;
     flex-shrink: 0;
-
   }
 }
