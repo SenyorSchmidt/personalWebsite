@@ -135,7 +135,6 @@ h1 {
   right: 1em;
 }
 
-/* **TODO: Add closing button or figure out way that menu closes by clicking anywhere**  */
 /* Slide out animation. Probably won't work, since the .burgerdivactive class is not active as soon as the menu closes*/
 @keyframes slideOut {
   from {
@@ -177,14 +176,14 @@ h1 {
 
 .techstack {
   color: #d2fdff;
-  display: flex;
+  display: grid;
   justify-content: center;
+  grid-template-columns: 1fr 1fr 1fr
 }
 
 /*Maybe use shadow with light color to make visual more appealing?*/
 .techstacktile {
 
-  width: 33%;
   padding-left: 5%;
   padding-right: 5%;
   padding-top: 2.5%;
@@ -257,8 +256,8 @@ h1 {
   }
 
   .techstack {
-    flex-wrap: wrap;
-    flex-shrink: 0;
+    display: grid;
+    grid-template-columns: 1fr;
   }
 }
 
@@ -296,12 +295,8 @@ h1 {
   }
 
   .techstack {
-    flex-wrap: wrap;
-    flex-shrink: 0;
-  }
-
-  .techstacktile {
-    flex-shrink: 0;
+    display: grid;
+    grid-template-columns: 1fr;
   }
 }
 
@@ -338,7 +333,7 @@ h1 {
   }
 
   .techstack {
-    flex-wrap: wrap;
-    flex-shrink: 0;
+    display: grid;
+    grid-template-columns: 1fr;
   }
 }

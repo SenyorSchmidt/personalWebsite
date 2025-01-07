@@ -31,28 +31,38 @@ const techStack = {
             "GSAP",
             "something",
             "GSAP (GreenSock Animation Platform) is a robust JavaScript library for creating high-performance animations on the web. It provides precise control over animations for elements like HTML, SVG, and CSS, making it a go-to tool for creating smooth, complex, and engaging motion effects."
+        ],
+        [
+            "Typescript",
+            "something",
+            "Typescript is blabglasndöglkasögkshgkasödglksj"
         ]
     ],
     ger: [
         [
             "React",
-            "irgendwas",
-            "Beschreibung"
+            reactSymbol,
+            "React.js is a popular JavaScript library for building dynamic and interactive user interfaces, particularly for single-page applications. It enables developers to create reusable UI components and efficiently update the DOM using a virtual DOM for improved performance."
         ],
         [
             "HTML/CSS/JS",
-            "irgendwas",
-            "Beschreibung"
+            htmlCssJsSymbol,
+            "HTML, CSS, and JavaScript are the foundational technologies for building web pages. HTML structures content, CSS styles it with design and layout, and JavaScript adds interactivity and dynamic functionality."
         ],
         [
             "Three.js",
-            "irgendwas",
-            "Beschreibung"
+            "something",
+            "Three.js is a powerful JavaScript library for creating 3D graphics and animations directly in the browser using WebGL. It simplifies the process of rendering 3D scenes, objects, and effects, making it accessible for developers to build immersive visual experiences."
         ],
         [
             "GSAP",
-            "irgendwas",
-            "Beschreibung"
+            "something",
+            "GSAP (GreenSock Animation Platform) is a robust JavaScript library for creating high-performance animations on the web. It provides precise control over animations for elements like HTML, SVG, and CSS, making it a go-to tool for creating smooth, complex, and engaging motion effects."
+        ],
+        [
+            "Typescript",
+            "something",
+            "Typescript is blabglasndöglkasögkshgkasödglksj"
         ]
     ]
 }
