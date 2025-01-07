@@ -8,7 +8,7 @@ const buttonText = {
     en: ["About Me",
         "Tech Stack",
         "Contact Me"],
-    ger: ["Über mich",
+    ger: ["Über Mich",
         "Technologien",
         "Kontakt"],
 }
@@ -34,6 +34,7 @@ const Navbar = () => {
                 behavior: "smooth",
                 block: "start"
             });
+            console.log(id)
         }
         //closes the burgermenu after selecting the wanted section
         setIsMenuOpen();
@@ -66,7 +67,7 @@ const Navbar = () => {
                         <button className="burgerclosingbutton" onClick={toggleMenu}>x</button>
                         {buttonText[language].map((text, index) =>
                             <ul className={`burgerlist ${isMenuOpen ? "active" : ""}`}>
-                                <li key={index} onClick={handleClick(text)} >{text}</li>
+                                <li key={index} onClick={handleClick(text)} ><button className="burgermenubutton">{text}</button></li>
                             </ul>
                         )}
                     </div>

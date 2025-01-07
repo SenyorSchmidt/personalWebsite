@@ -6,7 +6,7 @@ import { useLanguage } from "../context/languageProvider"
 // ** TODO: finish description and find a proper picture!!! **
 const textAboutMe = {
     en: [
-        <h1>About me</h1>,
+        <h1>About Me</h1>,
         <>
             <p>"Hi I'm Waldemar!"</p>
             <p>Im a frontend dev with a certificate from Meta.</p>
@@ -19,12 +19,17 @@ const textAboutMe = {
         </>]
 }
 
+const id = {
+    en: "About Me",
+    ger: "Über Mich"
+}
+
 
 const AboutMe = () => {
     const { language } = useLanguage()
 
     return (
-        <div className="container" id={textAboutMe[language]}>
+        <div className="container" id={id[language]}>
             {/** selects the first item from the textAboutMe dict, depenting on the language to show the header text.
              * language is selected through the navbar. State is given to Language selector and the state is imported*/}
             <div className="aboutMeHeader">

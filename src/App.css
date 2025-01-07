@@ -85,6 +85,8 @@ h1 {
   font-size: 1em;
   cursor: pointer;
   text-align: end;
+  position: fixed;
+  right: 0; 
 }
 
 .burgerclosingbutton{
@@ -108,6 +110,15 @@ h1 {
 
 .burgerlist>li {
   background-color: #d2fdff;
+  cursor: pointer;
+}
+
+.burgermenubutton{
+  background-color: #d2fdff;
+  border: none;
+  cursor: pointer;
+  font-size: 1em;
+
 }
 
 .burgerdiv {
@@ -183,7 +194,6 @@ h1 {
 
 /*Maybe use shadow with light color to make visual more appealing?*/
 .techstacktile {
-
   padding-left: 5%;
   padding-right: 5%;
   padding-top: 2.5%;
@@ -192,6 +202,11 @@ h1 {
 .techstacktilepicture {
   width: 5em;
   border-radius: 16px;
+  background-color: white;
+}
+
+.techstacktilepicture:hover{
+  box-shadow: 5px 5px 5px #F4976c;
 }
 
 .container {
@@ -266,7 +281,6 @@ h1 {
   .container {
     max-width: 475px;
     padding: 0;
-
   }
 
   .navbar {
