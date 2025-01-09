@@ -93,7 +93,7 @@ const Techstack = () => {
             <div className="techstack">
                 {techStack[language].map((text, index) =>
                     <div className="techstacktile">
-                        <img className="techstacktilepicture" src={text[1]}></img>
+                        <img alt="Symbol of the technology" className="techstacktilepicture" src={text[1]}></img>
                         <h2>{text[0]}</h2>
                         <p>{text[2]}</p>
                     </div>

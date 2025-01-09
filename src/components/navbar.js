@@ -53,8 +53,8 @@ const Navbar = () => {
                 </div>
                 {/*Language selector that sends the state back to the languageprovider Tag. From there you can use it by importing */}
                 <div className="languageSelection">
-                    <img className="languageSelector" src={unitedKingdom} onClick={() => changeLanguage("en")}></img>
-                    <img className="languageSelector" src={germany} onClick={() => changeLanguage("ger")}></img>
+                    <img alt="English Language" className="languageSelector" src={unitedKingdom} onClick={() => changeLanguage("en")}></img>
+                    <img alt="German Language" className="languageSelector" src={germany} onClick={() => changeLanguage("ger")}></img>
                 </div>
                 {/*Burgermenu div with mapping of the same buttonText array to easily add or delete buttons.
                 individual items are li in an ul, instead of buttons like in the regular navbar.

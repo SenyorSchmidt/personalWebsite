@@ -1,6 +1,8 @@
 import profilePicture from "../pictures/WaldemarSchmidt.PNG"
 import React from "react"
 import { useLanguage } from "../context/languageProvider"
+import metaCertificate from "../pictures/Meta Certificate.jpg"
+
 
 //dict with arrays for the text used in the About Me Header and the description
 // ** TODO: finish description and find a proper picture!!! **
@@ -37,7 +39,7 @@ const AboutMe = () => {
             </div>
             <div className="aboutme">
                 <div className="myPicture">
-                    <img src={profilePicture}>
+                    <img alt="Profilepicture Waldemar Schmidt" src={profilePicture}>
                     </img>
                 </div>
                 <div className="myDescription">
@@ -48,7 +50,10 @@ const AboutMe = () => {
                     </p>
                 </div>
             </div>
-
+                <div className="myCertificateContainer">
+                    <a href="https://coursera.org/verify/professional-cert/7GWG3YRPF5CH">
+                    <img alt="Certificate from Meta" className="myCertificate" src={metaCertificate}></img></a>
+                </div>
         </div>
     )
 }
