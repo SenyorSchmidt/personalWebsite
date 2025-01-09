@@ -42,7 +42,7 @@ const Navbar = () => {
 
     return (
         <>
-            <div className="container">
+            <div className="containerNavbar">
                 <div className="navbar">
                     {/*mapping over the buttonText array to easily add or delete buttons  */}
                     {buttonText[language].map((text, index) =>
