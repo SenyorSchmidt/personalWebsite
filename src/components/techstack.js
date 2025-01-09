@@ -5,6 +5,7 @@ import htmlCssJsSymbol from "../symbols/htmlCssJs.png"
 import GSAPSymbol from "../symbols/GSAP symbol.png"
 import typeScriptSymbol from "../symbols/Typescript_logo_2020.svg.png"
 import threeJSSymbol from "../symbols/Three.js_Icon.png"
+import pythonSymbol from "../symbols/python.png"
 
 /**dict with nested arrays depending on the language detailing my techstack consisting of:
  * - react
@@ -12,7 +13,7 @@ import threeJSSymbol from "../symbols/Three.js_Icon.png"
  * - Three.js (in progress of learning)
  *  - GSAP (in progress of learning)
 */
-// ** TODO: finish descriptions for techstack in both languages, find symbols **
+// ** TODO: finish descriptions for techstack in both languages, find symbols, add Python **
 const techStack = {
     en: [
         [
@@ -39,6 +40,11 @@ const techStack = {
             "Typescript",
             typeScriptSymbol,
             "TypeScript is a superset of JavaScript that adds static typing and advanced features, enabling developers to catch errors at compile time and write more robust, maintainable code. It compiles to plain JavaScript, ensuring compatibility with any JavaScript environment while enhancing developer productivity and scalability."
+        ],
+        [
+            "Python",
+            pythonSymbol,
+            "Python is a versatile programming language known for its simple syntax and readability. It is widely used in areas like web development, data analysis, artificial intelligence, and scientific computing."
         ]
     ],
     ger: [
@@ -62,7 +68,11 @@ const techStack = {
         [
             "Typescript",
             typeScriptSymbol,
-            "TypeScript ist eine Erweiterung von JavaScript, die statische Typisierung und fortgeschrittene Funktionen hinzufügt, wodurch Entwickler Fehler bereits zur Kompilierzeit erkennen und robusteren, wartungsfreundlicheren Code schreiben können. Es wird in reines JavaScript kompiliert, um die Kompatibilität mit jeder JavaScript-Umgebung zu gewährleisten und gleichzeitig die Produktivität und Skalierbarkeit zu verbessern."]
+            "TypeScript ist eine Erweiterung von JavaScript, die statische Typisierung und fortgeschrittene Funktionen hinzufügt, wodurch Entwickler Fehler bereits zur Kompilierzeit erkennen und robusteren, wartungsfreundlicheren Code schreiben können. Es wird in reines JavaScript kompiliert, um die Kompatibilität mit jeder JavaScript-Umgebung zu gewährleisten und gleichzeitig die Produktivität und Skalierbarkeit zu verbessern."],
+        [
+            "Python",
+            pythonSymbol,
+            "Python ist eine vielseitige Programmiersprache, die für ihre einfache Syntax und Lesbarkeit bekannt ist. Sie wird häufig in Bereichen wie Webentwicklung, Datenanalyse, Künstlicher Intelligenz und wissenschaftlichem Rechnen eingesetzt."]
     ]
 }
 
