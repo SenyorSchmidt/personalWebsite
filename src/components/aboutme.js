@@ -8,13 +8,13 @@ import metaCertificate from "../pictures/Meta Certificate.jpg"
 // ** TODO: finish description and find a proper picture!!! **
 const textAboutMe = {
     en: [
-        <h1>About Me</h1>,
+        <h1>ABOUT ME</h1>,
         <>
             <p>"Hi I'm Waldemar!"</p>
             <p>Im a frontend dev with a certificate from Meta.</p>
         </>],
     ger:
-        [<h1>Über Mich</h1>,
+        [<h1>ÜBER MICH</h1>,
         <>
             <p>"Hallo ich bin Waldemar"</p>
             <p>Ich bin ein Frontend-Entwickler mit einem Zertifikat von Meta.</p>
@@ -22,8 +22,8 @@ const textAboutMe = {
 }
 
 const id = {
-    en: "About Me",
-    ger: "Über Mich"
+    en: "ABOUT ME",
+    ger: "ÜBER MICH"
 }
 
 

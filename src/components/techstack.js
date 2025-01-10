@@ -78,8 +78,8 @@ const techStack = {
 
 // dict for headertext depending on language
 const header = {
-    en: "Tech Stack",
-    ger: "Technologien"
+    en: "TECH STACK",
+    ger: "TECHNOLOGIEN"
 }
 
 
