@@ -11,9 +11,10 @@ import pythonSymbol from "../symbols/python.png"
  * - react
  * - HTML/CSS/JS
  * - Three.js (in progress of learning)
- *  - GSAP (in progress of learning)
+ * - GSAP (in progress of learning)
+ * - Python
 */
-// ** TODO: finish descriptions for techstack in both languages, find symbols, add Python **
+
 const techStack = {
     en: [
         [

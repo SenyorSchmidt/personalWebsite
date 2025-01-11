@@ -7,9 +7,11 @@ import { useLanguage } from "../context/languageProvider";
 const buttonText = {
     en: ["ABOUT ME",
         "TECH STACK",
+        "PORTFOLIO",
         "CONTACT"],
     ger: ["ÜBER MICH",
         "TECHNOLOGIEN",
+        "PORTFOLIO",
         "KONTAKT"],
 }
 

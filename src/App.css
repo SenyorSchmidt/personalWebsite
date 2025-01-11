@@ -240,6 +240,7 @@ h1 {
   width: 5em;
   border-radius: 16px;
   background-color: white;
+  transition: box-shadow 0.3s;
 }
 
 .techstacktilepicture:hover {
