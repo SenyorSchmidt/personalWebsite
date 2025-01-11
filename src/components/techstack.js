@@ -8,10 +8,11 @@ import threeJSSymbol from "../symbols/Three.js_Icon.png"
 import pythonSymbol from "../symbols/python.png"
 
 /**dict with nested arrays depending on the language detailing my techstack consisting of:
- * - react
+ * - React
  * - HTML/CSS/JS
  * - Three.js (in progress of learning)
  * - GSAP (in progress of learning)
+ * - Typescript
  * - Python
 */
 
