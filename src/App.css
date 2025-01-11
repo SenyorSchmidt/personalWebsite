@@ -1,46 +1,35 @@
-
-
-h1{
-  color:#d2fdff;
+h1 {
+  color: #d2fdff;
   text-align: center;
-  margin-bottom: 0px;
   margin-top: 2rem;
+
 }
 
-.mainContainer{
- /* background-image: url("./pictures/background.jpg");
-  background-size:cover ;
-  background-repeat: no-repeat;*/
-  background-color: #01071d;
+.mainContainer {
+  background: rgb(2, 0, 36);
+  background: linear-gradient(220deg, rgba(2, 0, 36, 1) 0%, rgba(5, 4, 75, 1) 17%, rgba(6, 6, 89, 1) 40%, rgb(13, 13, 109) 63%, rgb(21, 21, 151) 80%);
+  /*background-image: url("./pictures/background.jpg")*/
 }
 
-.navbar{
+.navbarRight {
   display: flex;
   text-align: center;
   justify-content: center;
   align-items: center;
-  border: 1px solid red;
+  width: 100%;
 }
-/*
-.buttonAnimated{
-  color: #d2fdff;
-  border: none;
-  cursor: pointer;
-  min-width: 6em;
-  min-height: 3em;
-  font-size: 2em;
-  background-color: var(--background-color);
 
-  --border-size: 2px;
-  --accent-color: #d2fdff;
+.navbar {
+  position: fixed;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 100%;
+  z-index: 5;
+  background: rgb(2, 0, 36);
+  background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(5, 4, 75, 1) 17%, rgba(6, 6, 89, 1) 40%, rgb(13, 13, 109) 63%, rgb(21, 21, 151) 80%);
 }
-*/
-/*.navbarButton > button:hover{
-  background-color: #d2fdff;
-  color: #303c6c
-}*/
 
-.buttonAnimated{
+.buttonAnimated {
   position: relative;
   color: #d2fdff;
   border: none;
@@ -50,12 +39,16 @@ h1{
   font-size: 2em;
   background-color: var(--background-color);
   margin-top: 1em;
+  border-right: 2px solid #d2fdff;
+  font-size: 1em;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
 
   --border-size: 2px;
   --accent-color: #F4976c;
 }
 
-.buttonAnimated::before{
+.buttonAnimated::before {
   content: "";
   position: absolute;
   left: 0;
@@ -69,110 +62,197 @@ h1{
 }
 
 .buttonAnimated:hover::before,
-.buttonAnimated:focus::before{
+.buttonAnimated:focus::before {
   transform: scaleX(1)
 }
 
-.languageSelection{
+.languageSelection {
   display: flex;
-  justify-content: end;
+  justify-content: baseline;
+  margin-top: 1em;
+  padding-left: 0.5em;
 }
 
-.languageSelector{
-  max-width: 2em;
+.languageSelector {
+  max-width: 1.5em;
   margin-left: 0.5em;
   margin-right: 0.5em;
   cursor: pointer;
 }
 
-.burgermenu{
+.burgermenu {
   display: none;
   font-size: 2rem;
-  background:none;
+  background: none;
   border: none;
   color: white;
   text-align: end;
-
 }
 
-.burgerbutton{
-  color:#d2fdff;
-  background-color: #01071d;
+.burgerbutton {
+  color: #d2fdff;
+  background-color: transparent;
   border: none;
   font-size: 1em;
-  cursor:pointer;
+  cursor: pointer;
+  text-align: end;
+  position: fixed;
+  right: 0;
+}
+
+.burgerclosingbutton {
+  color: #0b0446;
+  background-color: white;
+  border: none;
+  font-size: 1em;
+  cursor: pointer;
   text-align: end;
 }
 
-.burgerlist{
+.burgerlist {
   display: flex;
   list-style: none;
-  color: #01071d;
   font-size: 0.5em;
-  justify-content: end;
+  justify-content: center;
   padding-right: 0.5em;
+  background-color: white ;
 }
 
-.burgerdiv{
+.burgerlist>li {
+  background-color: white;
+  cursor: pointer;
+}
+
+.burgermenubutton {
+  background-color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 1em;
+  color: #0b0446;
+
+}
+
+.burgerLanguageSelector{
+  width: 1em;
+  cursor: pointer;
+  padding: 0.5em;
+}
+
+.burgerdiv {
   position: fixed;
-  background-color: #d2fdff;
+  background-color: white;
   border-radius: 16px;
   padding-right: 0.5em;
   z-index: 1000;
   box-shadow: -2px 0 5px #d2fdff;
   right: 0em;
+  transform: translateX(120%);
 }
 
-.aboutme{
+/* burgermenu open */
+.burgerdivactive {
+  display: block;
+  animation: slideIn 0.5s forwards;
+  position: fixed;
+  background-color: white;
+  border-radius: 16px;
+  padding-right: 0.5em;
+  z-index: 1000;
+  right: 1em;
+}
+
+/* Slide out animation. Probably won't work, since the .burgerdivactive class is not active as soon as the menu closes*/
+@keyframes slideOut {
+  from {
+    transform: translateY(-1em);
+  }
+
+  to {
+    transform: translateY(-2em);
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(-2em);
+  }
+
+  to {
+    transform: translateY(-1em);
+  }
+}
+
+.aboutme {
   display: flex;
   justify-content: center;
   text-align: center;
-  border: 1px solid red;
 }
 
-.myPicture{
-  border: 1px solid red;
+.aboutMeHeader {
+  padding-top: 5em;
+}
+
+.myPicture {
   margin-right: 0.5em;
+  flex-shrink: 0;
 }
 
-.myDescription{
+.myDescription {
   margin-left: 0.5em;
-  border: 1px solid red;
   position: relative;
   max-width: 20em;
   color: #d2fdff;
+  flex-shrink: 0;
+  text-align: center;
 }
 
-.techstack{
-  border: 1px solid red;
-  color:#d2fdff;
-  display: flex;
+.myCertificateContainer {
+  padding-top: 2em;
+  align-items: center;
+  text-align: center;
+}
+
+.myCertificate {
+  width: 70%;
+  transition: transform 0.3s ease-in-out;
+}
+
+.myCertificate:hover {
+  box-shadow: #F4976c 0px 2px 8px, #F4976c 0px 0px 0px 6px;
+  transform: scale(1.1);
+}
+
+.techstack {
+  color: #d2fdff;
+  display: grid;
   justify-content: center;
+  grid-template-columns: 1fr 1fr 1fr
 }
 
 /*Maybe use shadow with light color to make visual more appealing?*/
-.techstacktile{
-  border: 1px solid red;
-  width:33%;
+.techstacktile {
   padding-left: 5%;
   padding-right: 5%;
   padding-top: 2.5%;
-  box-shadow: #F4976c 0px 8px 20px, #F4976c 0px 16px 56px, #F4976c 0px 24px 80px;
 }
 
-.techstacktilepicture{
+.techstacktilepicture {
   width: 5em;
-  color: #d2fdff;
-  border-radius:  16px;
+  border-radius: 16px;
+  background-color: white;
+  transition: box-shadow 0.3s;
+}
+
+.techstacktilepicture:hover {
+  box-shadow: 5px 5px 5px #F4976c;
 }
 
 .container {
   max-width: 1536px;
   margin-left: auto;
   margin-right: auto;
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
-  border: 1px solid green;
+  padding-left: 1em;
+  padding-right: 1em;
 }
 
 /* 2xl */
@@ -200,26 +280,45 @@ h1{
 @media (max-width: 768px) {
   .container {
     max-width: 640px;
+    padding: 0;
   }
-  .navbar{
+
+  .navbar {
     display: none;
   }
-  .burgermenu{
-    display:block;
+
+  .burgermenu {
+    display: block;
+    padding-top: 1em;
   }
-  .burgerlist{
-    display:none
+
+  .burgerlist {
+    display: none
   }
-  .burgerlist.active{
+
+  .burgerlist.active {
     display: flex;
   }
-  .aboutme{
+
+  .aboutme {
     flex-wrap: wrap;
     flex-shrink: 0;
   }
-  .techstack{
-    flex-wrap: wrap;
-    flex-shrink: 0;
+
+  .myDescription {
+    text-align: center;
+  }
+
+  .techstack {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .languageSelection {
+    display: flex;
+    justify-content: baseline;
+    margin-top: 1.5em;
+    padding-left: 0.5em;
   }
 }
 
@@ -227,28 +326,46 @@ h1{
 @media (max-width: 640px) {
   .container {
     max-width: 475px;
+    padding: 0;
   }
-  .navbar{
+
+  .navbar {
     display: none;
   }
-  .burgermenu{
-    display:block;
+
+  .burgermenu {
+    display: block;
+    padding-top: 1em;
+
   }
-  .burgerlist{
-    display:none
+
+  .burgerlist {
+    display: none
   }
-  .burgerlist.active{
+
+  .burgerlist.active {
     display: flex;
   }
-  .aboutme{
+
+  .aboutme {
     flex-wrap: wrap;
     flex-shrink: 0;
-
   }
-  .techstack{
-    flex-wrap: wrap;
-    flex-shrink: 0;
 
+  .myDescription {
+    text-align: center;
+  }
+
+  .techstack {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .languageSelection {
+    display: flex;
+    justify-content: baseline;
+    margin-top: 1.5em;
+    padding-left: 0.5em;
   }
 }
 
@@ -256,27 +373,45 @@ h1{
 @media (max-width: 475px) {
   .container {
     width: 100%;
+    padding: 0;
   }
-  .navbar{
+
+  .navbar {
     display: none;
   }
-  .burgermenu{
-    display:block;
+
+  .burgermenu {
+    display: block;
+    padding-top: 1em;
+
   }
-  .burgerlist{
-    display:none
+
+  .burgerlist {
+    display: none
   }
-  .burgerlist.active{
+
+  .burgerlist.active {
     display: flex;
   }
-  .aboutme{
+
+  .aboutme {
     flex-wrap: wrap;
     flex-shrink: 0;
-
   }
-  .techstack{
-    flex-wrap: wrap;
-    flex-shrink: 0;
 
+  .myDescription {
+    text-align: center;
+  }
+
+  .techstack {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .languageSelection {
+    display: flex;
+    justify-content: baseline;
+    margin-top: 1.5em;
+    padding-left: 0.5em;
   }
 }

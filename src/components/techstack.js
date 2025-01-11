@@ -2,14 +2,20 @@ import React from "react";
 import { useLanguage } from "../context/languageProvider";
 import reactSymbol from "../symbols/react.png"
 import htmlCssJsSymbol from "../symbols/htmlCssJs.png"
+import GSAPSymbol from "../symbols/GSAP symbol.png"
+import typeScriptSymbol from "../symbols/Typescript_logo_2020.svg.png"
+import threeJSSymbol from "../symbols/Three.js_Icon.png"
+import pythonSymbol from "../symbols/python.png"
 
 /**dict with nested arrays depending on the language detailing my techstack consisting of:
- * - react
+ * - React
  * - HTML/CSS/JS
  * - Three.js (in progress of learning)
- *  - GSAP (in progress of learning)
+ * - GSAP (in progress of learning)
+ * - Typescript
+ * - Python
 */
-// TODO: finish descriptions for techstack in both languages, find symbols
+
 const techStack = {
     en: [
         [
@@ -24,43 +30,58 @@ const techStack = {
         ],
         [
             "Three.js",
-            "something",
+            threeJSSymbol,
             "Three.js is a powerful JavaScript library for creating 3D graphics and animations directly in the browser using WebGL. It simplifies the process of rendering 3D scenes, objects, and effects, making it accessible for developers to build immersive visual experiences."
         ],
         [
             "GSAP",
-            "something",
+            GSAPSymbol,
             "GSAP (GreenSock Animation Platform) is a robust JavaScript library for creating high-performance animations on the web. It provides precise control over animations for elements like HTML, SVG, and CSS, making it a go-to tool for creating smooth, complex, and engaging motion effects."
+        ],
+        [
+            "Typescript",
+            typeScriptSymbol,
+            "TypeScript is a superset of JavaScript that adds static typing and advanced features, enabling developers to catch errors at compile time and write more robust, maintainable code. It compiles to plain JavaScript, ensuring compatibility with any JavaScript environment while enhancing developer productivity and scalability."
+        ],
+        [
+            "Python",
+            pythonSymbol,
+            "Python is a versatile programming language known for its simple syntax and readability. It is widely used in areas like web development, data analysis, artificial intelligence, and scientific computing."
         ]
     ],
     ger: [
         [
             "React",
-            "irgendwas",
-            "Beschreibung"
+            reactSymbol,
+            "React.js ist eine beliebte JavaScript-Bibliothek zur Erstellung dynamischer und interaktiver Benutzeroberflächen, insbesondere für Single-Page-Anwendungen. Sie ermöglicht Entwicklern, wiederverwendbare UI-Komponenten zu erstellen und den DOM mithilfe eines virtuellen DOMs effizient zu aktualisieren, was die Leistung verbessert."
         ],
         [
             "HTML/CSS/JS",
-            "irgendwas",
-            "Beschreibung"
-        ],
+            htmlCssJsSymbol,
+            "HTML, CSS und JavaScript sind die grundlegenden Technologien zum Erstellen von Webseiten. HTML strukturiert den Inhalt, CSS gestaltet ihn mit Design und Layout, und JavaScript fügt Interaktivität und dynamische Funktionalität hinzu."],
         [
             "Three.js",
-            "irgendwas",
-            "Beschreibung"
-        ],
+            threeJSSymbol,
+            "Three.js ist eine leistungsstarke JavaScript-Bibliothek zur Erstellung von 3D-Grafiken und Animationen direkt im Browser mithilfe von WebGL. Sie vereinfacht den Prozess der Darstellung von 3D-Szenen, Objekten und Effekten und macht es Entwicklern leicht, immersive visuelle Erlebnisse zu schaffen."],
         [
             "GSAP",
-            "irgendwas",
-            "Beschreibung"
-        ]
+            GSAPSymbol,
+            "GSAP (GreenSock Animation Platform) ist eine leistungsstarke JavaScript-Bibliothek zur Erstellung von hochperformanten Animationen im Web. Sie bietet präzise Kontrolle über Animationen von Elementen wie HTML, SVG und CSS und ist daher ein unverzichtbares Tool für die Erstellung flüssiger, komplexer und ansprechender Bewegungseffekte."],
+        [
+            "Typescript",
+            typeScriptSymbol,
+            "TypeScript ist eine Erweiterung von JavaScript, die statische Typisierung und fortgeschrittene Funktionen hinzufügt, wodurch Entwickler Fehler bereits zur Kompilierzeit erkennen und robusteren, wartungsfreundlicheren Code schreiben können. Es wird in reines JavaScript kompiliert, um die Kompatibilität mit jeder JavaScript-Umgebung zu gewährleisten und gleichzeitig die Produktivität und Skalierbarkeit zu verbessern."],
+        [
+            "Python",
+            pythonSymbol,
+            "Python ist eine vielseitige Programmiersprache, die für ihre einfache Syntax und Lesbarkeit bekannt ist. Sie wird häufig in Bereichen wie Webentwicklung, Datenanalyse, Künstlicher Intelligenz und wissenschaftlichem Rechnen eingesetzt."]
     ]
 }
 
 // dict for headertext depending on language
-const header =  {
-    en: "My Techstack",
-    ger: "Mein Techstack"
+const header = {
+    en: "TECH STACK",
+    ger: "TECHNOLOGIEN"
 }
 
 
@@ -68,18 +89,18 @@ const Techstack = () => {
     const { language } = useLanguage()
 
     return (
-        <div className="container">
-        <div className="techstackheader"><h1>{header[language]}</h1></div>
-        {/**mapping over the dict techStack to select fitting symbol, name and description of technology */}
-        <div className="techstack">
-            {techStack[language].map((text, index) =>
-                <div className="techstacktile">
-                    <img className="techstacktilepicture" src={text[1]}></img>
-                    <p>{text[0]}</p>
-                    <p>{text[2]}</p>
-                </div>
-            )}
-        </div>
+        <div className="container" id={header[language]}>
+            <div className="techstackheader"><h1>{header[language]}</h1></div>
+            {/**mapping over the dict techStack to select fitting symbol, name and description of technology */}
+            <div className="techstack">
+                {techStack[language].map((text, index) =>
+                    <div className="techstacktile">
+                        <img alt="Symbol of the technology" className="techstacktilepicture" src={text[1]}></img>
+                        <h2>{text[0]}</h2>
+                        <p>{text[2]}</p>
+                    </div>
+                )}
+            </div>
         </div>
     )
 }
