@@ -54,9 +54,7 @@ const Navbar = () => {
                         {buttonText[language].map((text, index) =>
                             <div className="navbarButton">
                                 <button key={index} onClick={handleClick(text)} className="buttonAnimated">{text}</button>
-
                             </div>
-
                         )}
                         {/*Language selector that sends the state back to the languageprovider Tag. From there you can use it by importing */}
                         <div className="languageSelection">
