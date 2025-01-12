@@ -10,13 +10,13 @@ const textAboutMe = {
     en: [
         <h1>ABOUT ME</h1>,
         <>
-            <p>"Hi I'm Waldemar!"</p>
+            <p>Hi I'm Waldemar!</p>
             <p>Im a frontend dev with a certificate from Meta.</p>
         </>],
     ger:
         [<h1>ÜBER MICH</h1>,
         <>
-            <p>"Hallo ich bin Waldemar"</p>
+            <p>Hallo ich bin Waldemar</p>
             <p>Ich bin ein Frontend-Entwickler mit einem Zertifikat von Meta.</p>
         </>]
 }
