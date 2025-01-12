@@ -9,19 +9,22 @@ import metaCertificate from "../pictures/Meta Certificate.jpg"
 
 //dict with arrays for the text used in the About Me Header and the description
 const textAboutMe = {
-    en: [
-        "ABOUT ME",
-        <>
-            <p>Hi I'm Waldemar!</p>
-            <p>Im a frontend dev with a certificate from Meta.</p>
-        </>],
+    en:
+        [
+            "ABOUT ME",
+            <>
+                <p>Hi I'm Waldemar!</p>
+                <p>Im a frontend dev with a certificate from Meta.</p>
+            </>
+        ],
     ger:
         [
             "ÜBER MICH",
             <>
                 <p>Hallo ich bin Waldemar</p>
                 <p>Ich bin ein Frontend-Entwickler mit einem Zertifikat von Meta.</p>
-            </>]
+            </>
+        ]
 }
 
 const AboutMe = () => {
@@ -46,7 +49,7 @@ const AboutMe = () => {
                 </div>
             </div>
             {/** Showcases my certificate from Meta as a picture with a link to the coursera page to verify the authenticity of certificate */}
-            <div className="myCertificateContainer">
+            <div className="myCertificateContainer">F
                 <a href="https://coursera.org/verify/professional-cert/7GWG3YRPF5CH">
                     <img alt="Certificate from Meta" className="myCertificate" src={metaCertificate}></img></a>
             </div>
