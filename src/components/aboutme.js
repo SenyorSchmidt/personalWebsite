@@ -10,34 +10,29 @@ import metaCertificate from "../pictures/Meta Certificate.jpg"
 
 const textAboutMe = {
     en: [
-        <h1>ABOUT ME</h1>,
+        "ABOUT ME",
         <>
             <p>Hi I'm Waldemar!</p>
             <p>Im a frontend dev with a certificate from Meta.</p>
         </>],
     ger:
-        [<h1>ÜBER MICH</h1>,
-        <>
-            <p>Hallo ich bin Waldemar</p>
-            <p>Ich bin ein Frontend-Entwickler mit einem Zertifikat von Meta.</p>
-        </>]
+        [
+            "ÜBER MICH",
+            <>
+                <p>Hallo ich bin Waldemar</p>
+                <p>Ich bin ein Frontend-Entwickler mit einem Zertifikat von Meta.</p>
+            </>]
 }
-
-const id = {
-    en: "ABOUT ME",
-    ger: "ÜBER MICH"
-}
-
 
 const AboutMe = () => {
     const { language } = useLanguage()
 
     return (
-        <div className="container" id={id[language]}>
+        <div className="container" id={textAboutMe[language][0]}>
             {/** selects the first item from the textAboutMe dict, depenting on the language to show the header text.
              * language is selected through the navbar. State is given to Language selector and the state is imported*/}
             <div className="aboutMeHeader">
-                {textAboutMe[language][0]}
+                <h1>{textAboutMe[language][0]}</h1>
             </div>
             <div className="aboutme">
                 <div className="myPicture">
@@ -47,16 +42,14 @@ const AboutMe = () => {
                 <div className="myDescription">
                     {/** selects the second item from the textAboutMe dict, depenting on the language to show the description
                      * language is selected through the navbar. State is given to Language selector and the state is imported*/}
-                    <p>
-                        {textAboutMe[language][1]}
-                    </p>
+                    {textAboutMe[language][1]}
                 </div>
             </div>
-                {/** Showcases my certificate from Meta as a picture with a link to the coursera page to verify the authenticity of certificate */}
-                <div className="myCertificateContainer">
-                    <a href="https://coursera.org/verify/professional-cert/7GWG3YRPF5CH">
+            {/** Showcases my certificate from Meta as a picture with a link to the coursera page to verify the authenticity of certificate */}
+            <div className="myCertificateContainer">
+                <a href="https://coursera.org/verify/professional-cert/7GWG3YRPF5CH">
                     <img alt="Certificate from Meta" className="myCertificate" src={metaCertificate}></img></a>
-                </div>
+            </div>
         </div>
     )
 }
