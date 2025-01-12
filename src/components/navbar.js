@@ -3,6 +3,8 @@ import unitedKingdom from "../symbols/unitedKingdom.png"
 import germany from "../symbols/germany.png"
 import { useLanguage } from "../context/languageProvider";
 
+// ** TODO: ADD GSAP Animation to component (bars sliding in from the sides, depending on scroll position)
+
 //text for the buttons in the navbar
 const buttonText = {
     en: ["ABOUT ME",

@@ -6,6 +6,8 @@ import metaCertificate from "../pictures/Meta Certificate.jpg"
 
 //dict with arrays for the text used in the About Me Header and the description
 // ** TODO: finish description and find a proper picture!!! **
+// ** TODO: ADD GSAP Animation to component (bars sliding in from the sides, depending on scroll position)
+
 const textAboutMe = {
     en: [
         <h1>ABOUT ME</h1>,

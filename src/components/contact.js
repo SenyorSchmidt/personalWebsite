@@ -1,6 +1,8 @@
 import React from "react"
 import { useLanguage } from "../context/languageProvider"
 
+// ** TODO: ADD GSAP Animation to component (bars sliding in from the sides, depending on scroll position)
+
 const contact = () => {
     return(
         <div>

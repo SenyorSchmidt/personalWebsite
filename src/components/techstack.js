@@ -16,6 +16,9 @@ import pythonSymbol from "../symbols/python.png"
  * - Python
 */
 
+// ** TODO: ADD GSAP Animation to component (bars sliding in from the sides, depending on scroll position)
+
+
 const techStack = {
     en: [
         [
