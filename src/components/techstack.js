@@ -7,6 +7,9 @@ import typeScriptSymbol from "../symbols/Typescript_logo_2020.svg.png"
 import threeJSSymbol from "../symbols/Three.js_Icon.png"
 import pythonSymbol from "../symbols/python.png"
 
+
+// ** TODO: ADD GSAP Animation to component (bars sliding in from the sides, depending on scroll position)
+
 /**dict with nested arrays depending on the language detailing my techstack consisting of:
  * - React
  * - HTML/CSS/JS
@@ -16,69 +19,68 @@ import pythonSymbol from "../symbols/python.png"
  * - Python
 */
 
-// ** TODO: ADD GSAP Animation to component (bars sliding in from the sides, depending on scroll position)
-
-
 const techStack = {
-    en: [
+    en:
         [
-            "React",
-            reactSymbol,
-            "React.js is a popular JavaScript library for building dynamic and interactive user interfaces, particularly for single-page applications. It enables developers to create reusable UI components and efficiently update the DOM using a virtual DOM for improved performance."
+            [
+                "React",
+                reactSymbol,
+                "React.js is a popular JavaScript library for building dynamic and interactive user interfaces, particularly for single-page applications. It enables developers to create reusable UI components and efficiently update the DOM using a virtual DOM for improved performance."
+            ],
+            [
+                "HTML/CSS/JS",
+                htmlCssJsSymbol,
+                "HTML, CSS, and JavaScript are the foundational technologies for building web pages. HTML structures content, CSS styles it with design and layout, and JavaScript adds interactivity and dynamic functionality."
+            ],
+            [
+                "Three.js",
+                threeJSSymbol,
+                "Three.js is a powerful JavaScript library for creating 3D graphics and animations directly in the browser using WebGL. It simplifies the process of rendering 3D scenes, objects, and effects, making it accessible for developers to build immersive visual experiences."
+            ],
+            [
+                "GSAP",
+                GSAPSymbol,
+                "GSAP (GreenSock Animation Platform) is a robust JavaScript library for creating high-performance animations on the web. It provides precise control over animations for elements like HTML, SVG, and CSS, making it a go-to tool for creating smooth, complex, and engaging motion effects."
+            ],
+            [
+                "Typescript",
+                typeScriptSymbol,
+                "TypeScript is a superset of JavaScript that adds static typing and advanced features, enabling developers to catch errors at compile time and write more robust, maintainable code. It compiles to plain JavaScript, ensuring compatibility with any JavaScript environment while enhancing developer productivity and scalability."
+            ],
+            [
+                "Python",
+                pythonSymbol,
+                "Python is a versatile programming language known for its simple syntax and readability. It is widely used in areas like web development, data analysis, artificial intelligence, and scientific computing."
+            ]
         ],
+    ger:
         [
-            "HTML/CSS/JS",
-            htmlCssJsSymbol,
-            "HTML, CSS, and JavaScript are the foundational technologies for building web pages. HTML structures content, CSS styles it with design and layout, and JavaScript adds interactivity and dynamic functionality."
-        ],
-        [
-            "Three.js",
-            threeJSSymbol,
-            "Three.js is a powerful JavaScript library for creating 3D graphics and animations directly in the browser using WebGL. It simplifies the process of rendering 3D scenes, objects, and effects, making it accessible for developers to build immersive visual experiences."
-        ],
-        [
-            "GSAP",
-            GSAPSymbol,
-            "GSAP (GreenSock Animation Platform) is a robust JavaScript library for creating high-performance animations on the web. It provides precise control over animations for elements like HTML, SVG, and CSS, making it a go-to tool for creating smooth, complex, and engaging motion effects."
-        ],
-        [
-            "Typescript",
-            typeScriptSymbol,
-            "TypeScript is a superset of JavaScript that adds static typing and advanced features, enabling developers to catch errors at compile time and write more robust, maintainable code. It compiles to plain JavaScript, ensuring compatibility with any JavaScript environment while enhancing developer productivity and scalability."
-        ],
-        [
-            "Python",
-            pythonSymbol,
-            "Python is a versatile programming language known for its simple syntax and readability. It is widely used in areas like web development, data analysis, artificial intelligence, and scientific computing."
+            [
+                "React",
+                reactSymbol,
+                "React.js ist eine beliebte JavaScript-Bibliothek zur Erstellung dynamischer und interaktiver Benutzeroberflächen, insbesondere für Single-Page-Anwendungen. Sie ermöglicht Entwicklern, wiederverwendbare UI-Komponenten zu erstellen und den DOM mithilfe eines virtuellen DOMs effizient zu aktualisieren, was die Leistung verbessert."
+            ],
+            [
+                "HTML/CSS/JS",
+                htmlCssJsSymbol,
+                "HTML, CSS und JavaScript sind die grundlegenden Technologien zum Erstellen von Webseiten. HTML strukturiert den Inhalt, CSS gestaltet ihn mit Design und Layout, und JavaScript fügt Interaktivität und dynamische Funktionalität hinzu."],
+            [
+                "Three.js",
+                threeJSSymbol,
+                "Three.js ist eine leistungsstarke JavaScript-Bibliothek zur Erstellung von 3D-Grafiken und Animationen direkt im Browser mithilfe von WebGL. Sie vereinfacht den Prozess der Darstellung von 3D-Szenen, Objekten und Effekten und macht es Entwicklern leicht, immersive visuelle Erlebnisse zu schaffen."],
+            [
+                "GSAP",
+                GSAPSymbol,
+                "GSAP (GreenSock Animation Platform) ist eine leistungsstarke JavaScript-Bibliothek zur Erstellung von hochperformanten Animationen im Web. Sie bietet präzise Kontrolle über Animationen von Elementen wie HTML, SVG und CSS und ist daher ein unverzichtbares Tool für die Erstellung flüssiger, komplexer und ansprechender Bewegungseffekte."],
+            [
+                "Typescript",
+                typeScriptSymbol,
+                "TypeScript ist eine Erweiterung von JavaScript, die statische Typisierung und fortgeschrittene Funktionen hinzufügt, wodurch Entwickler Fehler bereits zur Kompilierzeit erkennen und robusteren, wartungsfreundlicheren Code schreiben können. Es wird in reines JavaScript kompiliert, um die Kompatibilität mit jeder JavaScript-Umgebung zu gewährleisten und gleichzeitig die Produktivität und Skalierbarkeit zu verbessern."],
+            [
+                "Python",
+                pythonSymbol,
+                "Python ist eine vielseitige Programmiersprache, die für ihre einfache Syntax und Lesbarkeit bekannt ist. Sie wird häufig in Bereichen wie Webentwicklung, Datenanalyse, Künstlicher Intelligenz und wissenschaftlichem Rechnen eingesetzt."]
         ]
-    ],
-    ger: [
-        [
-            "React",
-            reactSymbol,
-            "React.js ist eine beliebte JavaScript-Bibliothek zur Erstellung dynamischer und interaktiver Benutzeroberflächen, insbesondere für Single-Page-Anwendungen. Sie ermöglicht Entwicklern, wiederverwendbare UI-Komponenten zu erstellen und den DOM mithilfe eines virtuellen DOMs effizient zu aktualisieren, was die Leistung verbessert."
-        ],
-        [
-            "HTML/CSS/JS",
-            htmlCssJsSymbol,
-            "HTML, CSS und JavaScript sind die grundlegenden Technologien zum Erstellen von Webseiten. HTML strukturiert den Inhalt, CSS gestaltet ihn mit Design und Layout, und JavaScript fügt Interaktivität und dynamische Funktionalität hinzu."],
-        [
-            "Three.js",
-            threeJSSymbol,
-            "Three.js ist eine leistungsstarke JavaScript-Bibliothek zur Erstellung von 3D-Grafiken und Animationen direkt im Browser mithilfe von WebGL. Sie vereinfacht den Prozess der Darstellung von 3D-Szenen, Objekten und Effekten und macht es Entwicklern leicht, immersive visuelle Erlebnisse zu schaffen."],
-        [
-            "GSAP",
-            GSAPSymbol,
-            "GSAP (GreenSock Animation Platform) ist eine leistungsstarke JavaScript-Bibliothek zur Erstellung von hochperformanten Animationen im Web. Sie bietet präzise Kontrolle über Animationen von Elementen wie HTML, SVG und CSS und ist daher ein unverzichtbares Tool für die Erstellung flüssiger, komplexer und ansprechender Bewegungseffekte."],
-        [
-            "Typescript",
-            typeScriptSymbol,
-            "TypeScript ist eine Erweiterung von JavaScript, die statische Typisierung und fortgeschrittene Funktionen hinzufügt, wodurch Entwickler Fehler bereits zur Kompilierzeit erkennen und robusteren, wartungsfreundlicheren Code schreiben können. Es wird in reines JavaScript kompiliert, um die Kompatibilität mit jeder JavaScript-Umgebung zu gewährleisten und gleichzeitig die Produktivität und Skalierbarkeit zu verbessern."],
-        [
-            "Python",
-            pythonSymbol,
-            "Python ist eine vielseitige Programmiersprache, die für ihre einfache Syntax und Lesbarkeit bekannt ist. Sie wird häufig in Bereichen wie Webentwicklung, Datenanalyse, Künstlicher Intelligenz und wissenschaftlichem Rechnen eingesetzt."]
-    ]
 }
 
 // dict for headertext depending on language
