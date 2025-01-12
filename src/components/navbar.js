@@ -78,6 +78,7 @@ const Navbar = () => {
                                 <li key={index} onClick={handleClick(text)} ><button className="burgermenubutton">{text}</button></li>
                             </ul>
                         )}
+                        {/** Added language selection to burger menu as well, instead of just on the page */}
                         <img alt="English Language" className="burgerLanguageSelector" src={unitedKingdom} onClick={() => changeLanguage("en")}></img>
                         <img alt="German Language" className="burgerLanguageSelector" src={germany} onClick={() => changeLanguage("ger")}></img>
                     </div>
