@@ -89,7 +89,6 @@ const header = {
     ger: "TECHNOLOGIEN"
 }
 
-
 const Techstack = () => {
     const { language } = useLanguage()
 
@@ -98,7 +97,7 @@ const Techstack = () => {
             <div className="techstackheader"><h1>{header[language]}</h1></div>
             {/**mapping over the dict techStack to select fitting symbol, name and description of technology */}
             <div className="techstack">
-                {techStack[language].map((text, index) =>
+                {techStack[language].map((text) =>
                     <div className="techstacktile">
                         <img alt="Symbol of the technology" className="techstacktilepicture" src={text[1]}></img>
                         <h2>{text[0]}</h2>
