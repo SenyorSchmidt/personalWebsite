@@ -49,7 +49,7 @@ const AboutMe = () => {
                 </div>
             </div>
             {/** Showcases my certificate from Meta as a picture with a link to the coursera page to verify the authenticity of certificate */}
-            <div className="myCertificateContainer">F
+            <div className="myCertificateContainer">
                 <a href="https://coursera.org/verify/professional-cert/7GWG3YRPF5CH">
                     <img alt="Certificate from Meta" className="myCertificate" src={metaCertificate}></img></a>
             </div>
