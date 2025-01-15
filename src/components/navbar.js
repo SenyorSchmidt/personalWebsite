@@ -36,6 +36,7 @@ const Navbar = () => {
     // State for light-dark-mode
     const { mode, changeMode } = useMode()
 
+
     //handleClick to find the element on the website and scroll into view
     const handleClick = (anchor) => (e) => {
         e.preventDefault()
@@ -56,8 +57,12 @@ const Navbar = () => {
     return (
         <>
             <div className="containerNavbar">
-                <div className="navbar">
+                {/**<div className="navbar">*/}
+                <div className={`navbar${mode === "light" ? "Light" : "Dark"}`}>
                     <div className="navbarLeft">
+                        <label class="switch">
+                            <input type="checkbox" checked={ mode } onChange={() => changeMode("light") }></input>
+                        </label>
                     </div>
                     <div className="navbarRight">
                         {/*mapping over the buttonText array to easily add or delete buttons  */}
