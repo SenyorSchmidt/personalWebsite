@@ -3,26 +3,31 @@ import AboutMe from "./components/aboutme";
 import "./App.css";
 import { LanguageProvider } from './context/languageProvider';
 import Techstack from "./components/techstack";
-import { ModeProvider } from "./context/modeProvider";
+import { DarkmodeProvider, useDarkmode } from "./context/modeProvider";
 
-// ** TODO: Find proper way to integrate background picture or find way to make background more appealing **
-// ** TODO: Create Portfolio page **
-// ** TODO: Create switch for light/dark mode
-
-
-// test if commit and push works
-function App() {
+function MainApp() {
+  const { darkmode } = useDarkmode()
   return (
     <>
-      <div className="mainContainer">
-        <ModeProvider>
+      <div className={`mainContainer${darkmode ? "Dark" : "Light"}`}>
         <LanguageProvider>
           <Navbar />
           <AboutMe />
           <Techstack />
         </LanguageProvider>
-        </ModeProvider>
       </div>
+    </>
+  );
+}
+
+
+function App() {
+  return (
+    <>
+      <DarkmodeProvider>
+        <MainApp />
+      </DarkmodeProvider>
+
     </>
   );
 }

@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import unitedKingdom from "../symbols/unitedKingdom.png"
 import germany from "../symbols/germany.png"
 import { useLanguage } from "../context/languageProvider";
-import { useMode } from "../context/modeProvider"
+import { useDarkmode } from "../context/modeProvider"
 
 // ** TODO: ADD GSAP Animation to component (bars sliding in from the sides, depending on scroll position)
 // ** TODO: Implement light-dark-mode switch with functionality
@@ -34,8 +34,7 @@ const Navbar = () => {
     };
 
     // State for light-dark-mode
-    const { mode, changeMode } = useMode()
-
+    const { darkmode, changeDarkmode } = useDarkmode()
 
     //handleClick to find the element on the website and scroll into view
     const handleClick = (anchor) => (e) => {
@@ -58,11 +57,10 @@ const Navbar = () => {
         <>
             <div className="containerNavbar">
                 {/**<div className="navbar">*/}
-                <div className={`navbar${mode === "light" ? "Light" : "Dark"}`}>
+                <div className={`navbar${darkmode ? "Dark" : "Light"}`}>
                     <div className="navbarLeft">
-                        <label class="switch">
-                            <input type="checkbox" checked={ mode } onChange={() => changeMode("light") }></input>
-                        </label>
+                        <button onClick={() => changeDarkmode(true)}>Dark Mode</button>
+                        <button onClick={() => changeDarkmode(false)}>Light Mode</button>
                     </div>
                     <div className="navbarRight">
                         {/*mapping over the buttonText array to easily add or delete buttons  */}

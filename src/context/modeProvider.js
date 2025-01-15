@@ -1,24 +1,24 @@
 import React, { createContext, useState, useContext } from 'react';
 
 // Create the Context
-export const ModeContext = createContext();
+export const DarkmodeContext = createContext();
 
 // Create the Provider Component
-export const ModeProvider = ({ children }) => {
-    const [mode, setMode] = useState('dark'); // Default language
+export const DarkmodeProvider = ({ children }) => {
+    const [darkmode, setDarkmode] = useState(true); // Default mode
 
-    const changeMode = (theme) => {
-            setMode(theme);
+    const changeDarkmode = (bool) => {
+            setDarkmode(bool);
     };
 
     return (
-        <ModeContext.Provider value={{ mode, changeMode }}>
+        <DarkmodeContext.Provider value={{ darkmode, changeDarkmode }}>
             {children}
-        </ModeContext.Provider>
+        </DarkmodeContext.Provider>
     );
 };
 
 // Create a custom hook for consuming the context
-export const useMode = () => {
-    return useContext(ModeContext);
+export const useDarkmode = () => {
+    return useContext(DarkmodeContext);
 };
