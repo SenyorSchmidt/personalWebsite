@@ -2,8 +2,10 @@ import React, { useState } from "react";
 import unitedKingdom from "../symbols/unitedKingdom.png"
 import germany from "../symbols/germany.png"
 import { useLanguage } from "../context/languageProvider";
+import { useMode } from "../context/modeProvider"
 
 // ** TODO: ADD GSAP Animation to component (bars sliding in from the sides, depending on scroll position)
+// ** TODO: Implement light-dark-mode switch with functionality
 
 //text for the buttons in the navbar
 const buttonText = {
@@ -20,13 +22,19 @@ const buttonText = {
 //navbar with language selector using useLanguage() custom hook, useState for triggering of the
 //burger menu and the working function to change the state of isMenuOpen
 const Navbar = () => {
+    // State for the language
     const { language, changeLanguage } = useLanguage()
 
+    // State for the burger menu
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
+    // Function for the burger menu (open-close)
     const toggleMenu = () => {
         setIsMenuOpen(!isMenuOpen);
     };
+
+    // State for light-dark-mode
+    const { mode, changeMode } = useMode()
 
     //handleClick to find the element on the website and scroll into view
     const handleClick = (anchor) => (e) => {
