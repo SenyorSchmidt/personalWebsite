@@ -6,6 +6,8 @@ import Techstack from "./components/techstack";
 
 // ** TODO: Find proper way to integrate background picture or find way to make background more appealing **
 // ** TODO: Create Portfolio page **
+// ** TODO: Create switch for light/dark mode
+
 
 // test if commit and push works
 function App() {
