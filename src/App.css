@@ -2,14 +2,12 @@
   color: #d2fdff;
   text-align: center;
   margin-top: 2rem;
-
 }
 
 .h1Light {
   color: #242525;
   text-align: center;
   margin-top: 2rem;
-
 }
 
 .mainContainerDark {
@@ -19,8 +17,8 @@
 }
 
 .mainContainerLight {
-  background: white;
-  /*background-image: url("./pictures/background.jpg")*/
+  background: rgb(255,255,255);
+  background: linear-gradient(220deg, rgba(255,255,255,1) 0%, rgba(205,205,205,1) 54%, rgba(184,184,184,1) 68%, rgba(154,154,154,1) 89%, rgba(125,125,125,1) 97%); 
 }
 
 .navbarRight {
@@ -47,7 +45,8 @@
   grid-template-columns: 1fr 1fr;
   width: 100%;
   z-index: 5;
-  background: white;
+  background: rgb(255,255,255);
+  background: linear-gradient(20deg, rgba(255,255,255,1) 0%, rgba(205,205,205,1) 54%, rgba(184,184,184,1) 68%, rgba(154,154,154,1) 89%, rgba(125,125,125,1) 97%); 
 }
 
 .modeSelector {
@@ -269,8 +268,15 @@
   transform: scale(1.1);
 }
 
-.techstack {
+.techstackDark {
   color: #d2fdff;
+  display: grid;
+  justify-content: center;
+  grid-template-columns: 1fr 1fr 1fr
+}
+
+.techstackLight {
+  color: #242525;
   display: grid;
   justify-content: center;
   grid-template-columns: 1fr 1fr 1fr
@@ -356,7 +362,7 @@
     text-align: center;
   }
 
-  .techstack {
+  .techstackDark, .techstackLight {
     display: grid;
     grid-template-columns: 1fr;
   }
@@ -403,7 +409,7 @@
     text-align: center;
   }
 
-  .techstack {
+  .techstackDark, .techstackLight  {
     display: grid;
     grid-template-columns: 1fr;
   }
@@ -450,7 +456,7 @@
     text-align: center;
   }
 
-  .techstack {
+  .techstackDark, .techstackLight {
     display: grid;
     grid-template-columns: 1fr;
   }

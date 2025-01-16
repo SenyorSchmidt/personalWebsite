@@ -96,7 +96,7 @@ const Techstack = () => {
         <div className="container" id={header[language]}>
             <h1 className={`h1${darkmode ? "Dark" : "Light"}`}>{header[language]}</h1>
             {/**mapping over the dict techStack to select fitting symbol, name and description of technology */}
-            <div className="techstack">
+            <div className={`techstack${darkmode ? "Dark" : "Light"}`}>
                 {techStack[language].map((text) =>
                     <div className="techstacktile">
                         <img alt="Symbol of the technology" className="techstacktilepicture" src={text[1]}></img>
