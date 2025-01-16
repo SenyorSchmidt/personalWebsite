@@ -3,6 +3,8 @@ import unitedKingdom from "../symbols/unitedKingdom.png"
 import germany from "../symbols/germany.png"
 import { useLanguage } from "../context/languageProvider";
 import { useDarkmode } from "../context/modeProvider"
+import sun from "../symbols/sun.png"
+import moon from "../symbols/moon.png"
 
 // ** TODO: ADD GSAP Animation to component (bars sliding in from the sides, depending on scroll position)
 // ** TODO: Implement light-dark-mode switch with functionality
@@ -59,8 +61,8 @@ const Navbar = () => {
                 {/**<div className="navbar">*/}
                 <div className={`navbar${darkmode ? "Dark" : "Light"}`}>
                     <div className="navbarLeft">
-                        <button onClick={() => changeDarkmode(true)}>Dark Mode</button>
-                        <button onClick={() => changeDarkmode(false)}>Light Mode</button>
+                        <img className="modeSelector" src={sun} onClick={() => changeDarkmode(false)}></img>
+                        <img className="modeSelector" src={moon} onClick={() => changeDarkmode(true)}></img>
                     </div>
                     <div className="navbarRight">
                         {/*mapping over the buttonText array to easily add or delete buttons  */}
@@ -91,9 +93,15 @@ const Navbar = () => {
                                 <li key={index} onClick={handleClick(text)} ><button className="burgermenubutton">{text}</button></li>
                             </ul>
                         )}
+                        <div>
                         {/** Added language selection to burger menu as well, instead of just on the page */}
                         <img alt="English Language" className="burgerLanguageSelector" src={unitedKingdom} onClick={() => changeLanguage("en")}></img>
                         <img alt="German Language" className="burgerLanguageSelector" src={germany} onClick={() => changeLanguage("ger")}></img>
+                        </div>
+                        <div>
+                        <img className="modeSelector" src={sun} onClick={() => changeDarkmode(false)}></img>
+                        <img className="modeSelector" src={moon} onClick={() => changeDarkmode(true)}></img>
+                        </div>
                     </div>
                 </div>
             </div>
