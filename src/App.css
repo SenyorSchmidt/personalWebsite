@@ -1,5 +1,12 @@
-h1 {
+.h1Dark {
   color: #d2fdff;
+  text-align: center;
+  margin-top: 2rem;
+
+}
+
+.h1Light {
+  color: #242525;
   text-align: center;
   margin-top: 2rem;
 
@@ -110,8 +117,19 @@ h1 {
   text-align: end;
 }
 
-.burgerbutton {
+.burgerbuttonDark {
   color: #d2fdff;
+  background-color: transparent;
+  border: none;
+  font-size: 1em;
+  cursor: pointer;
+  text-align: end;
+  position: fixed;
+  right: 0;
+}
+
+.burgerbuttonLight {
+  color: #242525;
   background-color: transparent;
   border: none;
   font-size: 1em;
@@ -150,7 +168,6 @@ h1 {
   cursor: pointer;
   font-size: 1em;
   color: #0b0446;
-
 }
 
 .burgerLanguageSelector{
@@ -218,11 +235,20 @@ h1 {
   flex-shrink: 0;
 }
 
-.myDescription {
+.myDescriptionDark {
   margin-left: 0.5em;
   position: relative;
   max-width: 20em;
   color: #d2fdff;
+  flex-shrink: 0;
+  text-align: center;
+}
+
+.myDescriptionLight {
+  margin-left: 0.5em;
+  position: relative;
+  max-width: 20em;
+  color: #242525;
   flex-shrink: 0;
   text-align: center;
 }

@@ -6,7 +6,7 @@ import GSAPSymbol from "../symbols/GSAP symbol.png"
 import typeScriptSymbol from "../symbols/Typescript_logo_2020.svg.png"
 import threeJSSymbol from "../symbols/Three.js_Icon.png"
 import pythonSymbol from "../symbols/python.png"
-
+import { useDarkmode } from "../context/modeProvider"
 
 // ** TODO: ADD GSAP Animation to component (bars sliding in from the sides, depending on scroll position)
 
@@ -91,10 +91,10 @@ const header = {
 
 const Techstack = () => {
     const { language } = useLanguage()
-
+    const { darkmode, changeDarkmode } = useDarkmode()
     return (
         <div className="container" id={header[language]}>
-            <div className="techstackheader"><h1>{header[language]}</h1></div>
+            <h1 className={`h1${darkmode ? "Dark" : "Light"}`}>{header[language]}</h1>
             {/**mapping over the dict techStack to select fitting symbol, name and description of technology */}
             <div className="techstack">
                 {techStack[language].map((text) =>

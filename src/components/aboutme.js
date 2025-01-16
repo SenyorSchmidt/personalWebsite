@@ -2,6 +2,8 @@ import profilePicture from "../pictures/WaldemarSchmidt.PNG"
 import React from "react"
 import { useLanguage } from "../context/languageProvider"
 import metaCertificate from "../pictures/Meta Certificate.jpg"
+import { useDarkmode } from "../context/modeProvider"
+
 
 
 // ** TODO: finish description and find a proper picture!!! **
@@ -29,20 +31,21 @@ const textAboutMe = {
 
 const AboutMe = () => {
     const { language } = useLanguage()
+    const { darkmode } = useDarkmode()
 
     return (
         <div className="container" id={textAboutMe[language][0]}>
             {/** selects the first item from the textAboutMe dict, depenting on the language to show the header text.
              * language is selected through the navbar. State is given to Language selector and the state is imported*/}
             <div className="aboutMeHeader">
-                <h1>{textAboutMe[language][0]}</h1>
+                <h1 className={`h1${darkmode ? "Dark" : "Light"}`}>{textAboutMe[language][0]}</h1>
             </div>
             <div className="aboutme">
                 <div className="myPicture">
                     <img alt="Profilepicture Waldemar Schmidt" src={profilePicture}>
                     </img>
                 </div>
-                <div className="myDescription">
+                <div className={`myDescription${darkmode ? "Dark" : "Light"}`}>
                     {/** selects the second item from the textAboutMe dict, depenting on the language to show the description
                      * language is selected through the navbar. State is given to Language selector and the state is imported*/}
                     {textAboutMe[language][1]}

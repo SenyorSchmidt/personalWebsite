@@ -83,7 +83,7 @@ const Navbar = () => {
                 individual items are li in an ul, instead of buttons like in the regular navbar.
                 */}
                 <div className="burgermenu">
-                    <button className="burgerbutton" aria-label="Toggle Navigation" onClick={toggleMenu}>
+                    <button className={`burgerbutton${darkmode ? "Dark" : "Light"}`} aria-label="Toggle Navigation" onClick={toggleMenu}>
                         ☰
                     </button>
                     <div className={`burgerdiv${isMenuOpen ? "active" : ""}`}>
