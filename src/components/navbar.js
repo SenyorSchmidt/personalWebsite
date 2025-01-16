@@ -61,14 +61,14 @@ const Navbar = () => {
                 {/**<div className="navbar">*/}
                 <div className={`navbar${darkmode ? "Dark" : "Light"}`}>
                     <div className="navbarLeft">
-                        <img className="modeSelector" src={sun} onClick={() => changeDarkmode(false)}></img>
-                        <img className="modeSelector" src={moon} onClick={() => changeDarkmode(true)}></img>
+                        <img alt="Light Mode" className="modeSelector" src={sun} onClick={() => changeDarkmode(false)}></img>
+                        <img alt="Dark Mode" className="modeSelector" src={moon} onClick={() => changeDarkmode(true)}></img>
                     </div>
                     <div className="navbarRight">
                         {/*mapping over the buttonText array to easily add or delete buttons  */}
                         {buttonText[language].map((text, index) =>
                             <div className="navbarButton">
-                                <button key={index} onClick={handleClick(text)} className="buttonAnimated">{text}</button>
+                                <button key={index} onClick={handleClick(text)} className={`buttonAnimated${darkmode ? "Dark" : "Light"}`}>{text}</button>
                             </div>
                         )}
                         {/*Language selector that sends the state back to the languageprovider Tag. From there you can use it by importing */}
@@ -99,8 +99,8 @@ const Navbar = () => {
                         <img alt="German Language" className="burgerLanguageSelector" src={germany} onClick={() => changeLanguage("ger")}></img>
                         </div>
                         <div>
-                        <img className="modeSelector" src={sun} onClick={() => changeDarkmode(false)}></img>
-                        <img className="modeSelector" src={moon} onClick={() => changeDarkmode(true)}></img>
+                        <img alt="Light Mode" className="modeSelector" src={sun} onClick={() => changeDarkmode(false)}></img>
+                        <img alt="Dark Mode" className="modeSelector" src={moon} onClick={() => changeDarkmode(true)}></img>
                         </div>
                     </div>
                 </div>

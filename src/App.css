@@ -56,7 +56,7 @@
   cursor: pointer;
 }
 
-.buttonAnimated {
+.buttonAnimatedDark {
   position: relative;
   color: #d2fdff;
   border: none;
@@ -75,7 +75,7 @@
   --accent-color: #F4976c;
 }
 
-.buttonAnimated::before {
+.buttonAnimatedDark::before {
   content: "";
   position: absolute;
   left: 0;
@@ -88,8 +88,45 @@
   transform: scaleX(0);
 }
 
-.buttonAnimated:hover::before,
-.buttonAnimated:focus::before {
+.buttonAnimatedDark:hover::before,
+.buttonAnimatedDark:focus::before {
+  transform: scaleX(1)
+}
+
+.buttonAnimatedLight {
+  position: relative;
+  color: #242525;
+  border: none;
+  cursor: pointer;
+  min-width: 6em;
+  min-height: 1em;
+  font-size: 2em;
+  background-color: var(--background-color);
+  margin-top: 1em;
+  border-right: 2px solid #242525;
+  font-size: 1em;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+
+  --border-size: 2px;
+  --accent-color: #F4976c;
+}
+
+.buttonAnimatedLight::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: var(--border-size);
+  background-color: var(--accent-color);
+  transition: transform 200ms ease-in-out;
+
+  transform: scaleX(0);
+}
+
+.buttonAnimatedLight:hover::before,
+.buttonAnimatedLight:focus::before {
   transform: scaleX(1)
 }
 

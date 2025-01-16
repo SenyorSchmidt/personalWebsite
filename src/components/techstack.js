@@ -91,7 +91,7 @@ const header = {
 
 const Techstack = () => {
     const { language } = useLanguage()
-    const { darkmode, changeDarkmode } = useDarkmode()
+    const { darkmode } = useDarkmode()
     return (
         <div className="container" id={header[language]}>
             <h1 className={`h1${darkmode ? "Dark" : "Light"}`}>{header[language]}</h1>
