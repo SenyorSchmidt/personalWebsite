@@ -360,6 +360,11 @@
   text-align: center;
 }
 
+form{
+  display:grid;
+  text-align: center;
+}
+
 input{
   border-radius: 8px;
   width: 60%;
@@ -367,12 +372,37 @@ input{
   font-size: 1.5em;
   text-align: center;
   background-color: transparent;
+  margin: 0.5em
 }
 
-.contactFormDark > input {
+label{
+  font-size: 1em;
+}
+
+.contactFormDark > form > input {
   color: #d2fdff;
   border: 2px solid #F4976c;
+}
 
+.contactFormLight > form > input {
+  color: #242525;
+  border: 2px solid #242525;
+}
+
+.submitButton{
+  cursor: pointer;
+  background-color: #F4976c;
+  width: 60%;
+  justify-self: center;
+  margin: 0.5em;
+  border-radius: 8px;
+  font-size: 1.5em;
+  border: 2px solid #242525;
+  transition: box-shadow 0.3s;
+}
+
+.submitButton:hover{
+  box-shadow: 5px 5px 5px darkslategray;
 }
 
 .container {

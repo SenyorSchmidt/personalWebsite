@@ -9,23 +9,23 @@ import * as Yup from 'yup';
 
 const formikMessage = {
     en:
-    [
-        "Please type in your name",
-        "Please type in your e-mail adress",
-        "Ungültige E-Mailadresse",
-        "Please type in the subject",
-        "Please type in your request",
-        "Has to contain at least 25 characters"
-    ],
+        [
+            "Please type in your name",
+            "Please type in your e-mail adress",
+            "Ungültige E-Mailadresse",
+            "Please type in the subject",
+            "Please type in your request",
+            "Has to contain at least 25 characters"
+        ],
     ger:
-    [
-        "Bitte gb deinen Namen an",
-        "Bitte gib eine E-Mailadresse an",
-        "Ungültige E-Mailadresse",
-        "Bitte gib einen Betreff an",
-        "Bitte gib deine Anfrage ein",
-        "Muss mindestens 25 zeichen enthalten"
-    ]
+        [
+            "Bitte gb deinen Namen an",
+            "Bitte gib eine E-Mailadresse an",
+            "Ungültige E-Mailadresse",
+            "Bitte gib einen Betreff an",
+            "Bitte gib deine Anfrage ein",
+            "Muss mindestens 25 zeichen enthalten"
+        ]
 }
 
 const header = {
@@ -34,7 +34,7 @@ const header = {
 }
 
 const Contact = () => {
-    
+
     const { language } = useLanguage()
     const { darkmode } = useDarkmode()
 
@@ -59,7 +59,7 @@ const Contact = () => {
     }
 
     const formik = useFormik({
-        initialValues:{
+        initialValues: {
             firstName: "",
             email: "",
             subject: "",
@@ -73,33 +73,33 @@ const Contact = () => {
         })
     })
 
-    return(
+    return (
         <div className="container" id={header[language]}>
-            {/** TODO: ADD CONTACT FORM -> Maybe without formik
-             * Add following inputfields:
-             *- Name (Type = String)
-             *- E-Mail (Type = E-mail)
-             *- Subject (Type = String)
-             *- Text (Type = String)
-             *- Send-Button (only activates when all fields are filled out and valid)
-             *
-             * TODO: Do I need to use Formik or can I find an alternative solution?
+            {/** TODO: FIND WAY TO MAKE FORMIK WORK WITHOUT CHAKRAUI
             */}
-            <h1 className={`h1${darkmode? "Dark" : "Light"}`} id={header[language]}>
+            <h1 className={`h1${darkmode ? "Dark" : "Light"}`} id={header[language]}>
                 {header[language]}
             </h1>
-            <div className={ `contactForm${darkmode ? "Dark": "Light"}`}>
-                <label>Name</label>
-                <input></input>
+            <div className={`contactForm${darkmode ? "Dark" : "Light"}`}>
+                <form>
+                    <label htmlFor="name">Name</label>
+                    <input
+                        id="name"
+                        name="name"
+                        value={formik.values.name}
+                        {...formik.getFieldProps("name")}
+                    ></input>
+                    <label htmlFor="email">E-Mail</label>
+                    <input></input>
 
-                <label>E-Mail</label>
-                <input></input>
+                    <label htmlFor="subject">Subject</label>
+                    <input></input>
 
-                <label>Subject</label>
-                <input></input>
+                    <label htmlFor="message">Message</label>
+                    <input></input>
 
-                <label>Message</label>
-                <input></input>
+                    <button className="submitButton">Submit</button>
+                </form>
             </div>
         </div>
     )
