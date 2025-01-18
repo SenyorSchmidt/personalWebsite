@@ -305,14 +305,14 @@
   transform: scale(1.1);
 }
 
-.techstackDark {
+.techstackDark, .portfolioDark {
   color: #d2fdff;
   display: grid;
   justify-content: center;
   grid-template-columns: 1fr 1fr 1fr
 }
 
-.techstackLight {
+.techstackLight, .portfolioLight {
   color: #242525;
   display: grid;
   justify-content: center;
@@ -320,7 +320,7 @@
 }
 
 /*Maybe use shadow with light color to make visual more appealing?*/
-.techstacktile {
+.techstacktile, .portfolioTile {
   padding-left: 5%;
   padding-right: 5%;
   padding-top: 2.5%;
@@ -331,6 +331,11 @@
   border-radius: 16px;
   background-color: white;
   transition: box-shadow 0.3s;
+}
+
+.portfolioTile > img{
+  width: 10em;
+  border-radius: 16px;
 }
 
 .techstacktilepicture:hover {
@@ -399,7 +404,7 @@
     text-align: center;
   }
 
-  .techstackDark, .techstackLight {
+  .techstackDark, .techstackLight, .portfolioDark, .portfolioLight {
     display: grid;
     grid-template-columns: 1fr;
   }
@@ -446,7 +451,7 @@
     text-align: center;
   }
 
-  .techstackDark, .techstackLight  {
+  .techstackDark, .techstackLight, .portfolioDark, .portfolioLight {
     display: grid;
     grid-template-columns: 1fr;
   }
@@ -493,7 +498,7 @@
     text-align: center;
   }
 
-  .techstackDark, .techstackLight {
+  .techstackDark, .techstackLight, .portfolioDark, .portfolioLight {
     display: grid;
     grid-template-columns: 1fr;
   }

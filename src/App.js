@@ -1,8 +1,9 @@
 import Navbar from "./components/navbar";
 import AboutMe from "./components/aboutme";
+import Techstack from "./components/techstack";
+import Portfolio from "./components/portfolio";
 import "./App.css";
 import { LanguageProvider } from './context/languageProvider';
-import Techstack from "./components/techstack";
 import { DarkmodeProvider, useDarkmode } from "./context/modeProvider";
 
 function MainApp() {
@@ -14,6 +15,7 @@ function MainApp() {
           <Navbar />
           <AboutMe />
           <Techstack />
+          <Portfolio />
         </LanguageProvider>
       </div>
     </>

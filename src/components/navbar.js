@@ -2,9 +2,9 @@ import React, { useState } from "react";
 import unitedKingdom from "../symbols/unitedKingdom.png"
 import germany from "../symbols/germany.png"
 import { useLanguage } from "../context/languageProvider";
-import { useDarkmode } from "../context/modeProvider"
-import sun from "../symbols/sun.png"
-import moon from "../symbols/moon.png"
+import { useDarkmode } from "../context/modeProvider";
+import sun from "../symbols/sun.png";
+import moon from "../symbols/moon.png";
 
 // ** TODO: ADD GSAP Animation to component (bars sliding in from the sides, depending on scroll position)
 // ** TODO: Implement light-dark-mode switch with functionality
@@ -13,11 +13,11 @@ import moon from "../symbols/moon.png"
 const buttonText = {
     en: ["ABOUT ME",
         "TECH STACK",
-        "PORTFOLIO",
+        "MY PORTFOLIO",
         "CONTACT"],
     ger: ["ÜBER MICH",
         "TECHNOLOGIEN",
-        "PORTFOLIO",
+        "MEIN PORTFOLIO",
         "KONTAKT"],
 }
 
