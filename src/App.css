@@ -347,6 +347,34 @@
   box-shadow: 5px 5px 5px #F4976c;
 }
 
+.contactFormDark{
+  color: #d2fdff;
+}
+
+.contactFormLight{
+  color: #242525;
+}
+
+.contactFormDark, .contactFormLight{
+  display:grid;
+  text-align: center;
+}
+
+input{
+  border-radius: 8px;
+  width: 60%;
+  justify-self: center;
+  font-size: 1.5em;
+  text-align: center;
+  background-color: transparent;
+}
+
+.contactFormDark > input {
+  color: #d2fdff;
+  border: 2px solid #F4976c;
+
+}
+
 .container {
   max-width: 1536px;
   margin-left: auto;
