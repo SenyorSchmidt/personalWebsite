@@ -36,7 +36,11 @@ const Navbar = () => {
     };
 
     // State for light-dark-mode
-    const { darkmode, changeDarkmode } = useDarkmode()
+    const { darkmode, changeDarkmode } = useDarkmode(false)
+
+    const toggleMode = () => {
+        changeDarkmode(!darkmode)
+    }
 
     //handleClick to find the element on the website and scroll into view
     const handleClick = (anchor) => (e) => {
@@ -61,8 +65,12 @@ const Navbar = () => {
                 {/**<div className="navbar">*/}
                 <div className={`navbar${darkmode ? "Dark" : "Light"}`}>
                     <div className="navbarLeft">
-                        <img alt="Light Mode" className="modeSelector" src={sun} onClick={() => changeDarkmode(false)}></img>
-                        <img alt="Dark Mode" className="modeSelector" src={moon} onClick={() => changeDarkmode(true)}></img>
+                        <img alt="Light Mode" className="modeSelector" src={sun} ></img>
+                        <label class="switch">
+                            <input type="checkbox" onChange={toggleMode}></input>
+                                <span class="slider round"></span>
+                        </label>
+                        <img alt="Dark Mode" className="modeSelector" src={moon} ></img>
                     </div>
                     <div className="navbarRight">
                         {/*mapping over the buttonText array to easily add or delete buttons  */}
@@ -94,13 +102,13 @@ const Navbar = () => {
                             </ul>
                         )}
                         <div>
-                        {/** Added language selection to burger menu as well, instead of just on the page */}
-                        <img alt="English Language" className="burgerLanguageSelector" src={unitedKingdom} onClick={() => changeLanguage("en")}></img>
-                        <img alt="German Language" className="burgerLanguageSelector" src={germany} onClick={() => changeLanguage("ger")}></img>
+                            {/** Added language selection to burger menu as well, instead of just on the page */}
+                            <img alt="English Language" className="burgerLanguageSelector" src={unitedKingdom} onClick={() => changeLanguage("en")}></img>
+                            <img alt="German Language" className="burgerLanguageSelector" src={germany} onClick={() => changeLanguage("ger")}></img>
                         </div>
                         <div>
-                        <img alt="Light Mode" className="modeSelector" src={sun} onClick={() => changeDarkmode(false)}></img>
-                        <img alt="Dark Mode" className="modeSelector" src={moon} onClick={() => changeDarkmode(true)}></img>
+                            <img alt="Light Mode" className="modeSelector" src={sun} onClick={() => changeDarkmode(false)}></img>
+                            <img alt="Dark Mode" className="modeSelector" src={moon} onClick={() => changeDarkmode(true)}></img>
                         </div>
                     </div>
                 </div>
