@@ -1,6 +1,6 @@
 import { useLanguage } from "../context/languageProvider";
 import { useDarkmode } from "../context/modeProvider";
-import React, { useState } from "react";
+import React from "react";
 import picture from "../pictures/project.png"
 
 /** Start Portfolio
@@ -74,7 +74,7 @@ const Portfolio = () => {
             <div className={ `portfolio${darkmode? "Dark" : "Light"}`}>
                 {portfolio[language].map((text) =>
                 <div className="portfolioTile">
-                    <img className="portfolioPicture" src={text[0]}></img>
+                    <img className="portfolioPicture" src={text[0]} alt="Portfolio Pic"></img>
                     <p>{text[1]}</p>
                 </div>
                     )}

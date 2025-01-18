@@ -333,12 +333,17 @@
   transition: box-shadow 0.3s;
 }
 
-.portfolioTile > img{
-  width: 10em;
-  border-radius: 16px;
+.techstacktilepicture:hover {
+  box-shadow: 5px 5px 5px #F4976c;
 }
 
-.techstacktilepicture:hover {
+.portfolioPicture{
+  width: 10em;
+  border-radius: 16px;
+  transition: box-shadow 0.3s;
+}
+
+.portfolioPicture:hover {
   box-shadow: 5px 5px 5px #F4976c;
 }
 
