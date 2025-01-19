@@ -107,8 +107,12 @@ const Navbar = () => {
                             <img alt="German Language" className="burgerLanguageSelector" src={germany} onClick={() => changeLanguage("ger")}></img>
                         </div>
                         <div>
-                            <img alt="Light Mode" className="modeSelector" src={sun} onClick={() => changeDarkmode(false)}></img>
-                            <img alt="Dark Mode" className="modeSelector" src={moon} onClick={() => changeDarkmode(true)}></img>
+                        <img alt="Light Mode" className="modeSelector" src={sun} ></img>
+                        <label class="switch">
+                            <input type="checkbox" onChange={toggleMode}></input>
+                                <span class="slider round"></span>
+                        </label>
+                        <img alt="Dark Mode" className="modeSelector" src={moon} ></img>
                         </div>
                     </div>
                 </div>
