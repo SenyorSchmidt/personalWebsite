@@ -62,7 +62,6 @@ const Navbar = () => {
     return (
         <>
             <div className="containerNavbar">
-                {/**<div className="navbar">*/}
                 <div className={`navbar${darkmode ? "Dark" : "Light"}`}>
                     <div className="navbarLeft">
                         <img alt="Light Mode" className="modeSelector" src={sun} ></img>
@@ -107,6 +106,7 @@ const Navbar = () => {
                             <img alt="German Language" className="burgerLanguageSelector" src={germany} onClick={() => changeLanguage("ger")}></img>
                         </div>
                         <div>
+                            {/** Added light-dark-mode switch to burger menu as well */}
                         <img alt="Light Mode" className="modeSelector" src={sun} ></img>
                         <label class="switch">
                             <input type="checkbox" onChange={toggleMode}></input>
