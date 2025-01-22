@@ -7,7 +7,7 @@ import sun from "../symbols/sun.png";
 import moon from "../symbols/moon.png";
 
 // ** TODO: ADD GSAP Animation to component (bars sliding in from the sides, depending on scroll position)
-// ** TODO: Implement light-dark-mode switch with functionality
+// ** TODO: Find good-looking sun and moon symbols
 
 //text for the buttons in the navbar
 const buttonText = {
