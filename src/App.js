@@ -7,6 +7,8 @@ import "./App.css";
 import { LanguageProvider } from './context/languageProvider';
 import { DarkmodeProvider, useDarkmode } from "./context/modeProvider";
 
+// ** TODO: Export MainApp in seperate component to keep it tidy
+
 function MainApp() {
   const { darkmode } = useDarkmode()
   return (
