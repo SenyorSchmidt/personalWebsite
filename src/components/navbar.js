@@ -8,6 +8,7 @@ import moon from "../symbols/moon.png";
 
 // ** TODO: ADD GSAP Animation to component (bars sliding in from the sides, depending on scroll position)
 // ** TODO: Find good-looking sun and moon symbols
+// ** TODO: Handle state over cookies, so mode stays like you left it
 
 //text for the buttons in the navbar
 const buttonText = {
