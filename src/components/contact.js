@@ -7,27 +7,7 @@ import * as Yup from 'yup';
 
 // ** TODO: ADD GSAP Animation to component (bars sliding in from the sides, depending on scroll position)
 // ** TODO: Implement EmailJS
-
-/*                <form>
-                    <label htmlFor="name">Name</label>
-                    <input
-                        id="name"
-                        name="name"
-                        value={formik.values.name}
-                        {...formik.getFieldProps("name")}
-                        
-                    ></input>
-                    <label htmlFor="email">E-Mail</label>
-                    <input></input>
-
-                    <label htmlFor="subject">Subject</label>
-                    <input></input>
-
-                    <label htmlFor="message">Message</label>
-                    <input></input>
-
-                    <button className="submitButton">Submit</button>
-                </form>*/
+// ** TODO: Implement handleSubmit for submit button
 
 const formikMessage = {
     en:
@@ -96,8 +76,6 @@ const Contact = () => {
 
     return (
         <div className="container" id={header[language]}>
-            {/** TODO: FIND WAY TO MAKE FORMIK WORK WITHOUT CHAKRAUI
-            */}
             <h1 className={`h1${darkmode ? "Dark" : "Light"}`} id={header[language]}>
                 {header[language]}
             </h1>
@@ -123,7 +101,7 @@ const Contact = () => {
                             {errors.comment && touched.comment ? (
                                 <div className="errorMessage">{errors.comment}</div>
                             ) : null}
-                            <button type="submit" className="submitButton">Submit</button>
+                            <button type="submit" className="submitButton" onSubmit={handleSubmit}>Submit</button>
                         </Form>)}
                 </Formik>
             </div>
