@@ -474,6 +474,10 @@ label{
   box-shadow: 5px 5px 5px darkslategray;
 }
 
+.errorMessage{
+  color: red;
+}
+
 .container {
   max-width: 1536px;
   margin-left: auto;
