@@ -2,6 +2,7 @@ import { useLanguage } from "../context/languageProvider";
 import { useDarkmode } from "../context/modeProvider";
 import React from "react";
 import picture from "../pictures/project.png"
+import robertswebsite from "../pictures/robertswebsite.png"
 
 /** Start Portfolio
  * TODO:
@@ -25,40 +26,16 @@ const portfolio = {
     en:
     [
         [
-            picture,
-            "Description"
+            robertswebsite,
+            "Professional website for a photographer specialised in night/portrait/street and landscape photography."
         ],
-        [
-            picture,
-            "Description"
-        ],
-        [
-            picture,
-            "Description"
-        ],
-        [
-            picture,
-            "Description"
-        ]
     ],
     ger:
     [
         [
-            picture,
-            "Beschreibung"
+            robertswebsite,
+            "Professionelle Website für einen Fotografen spezialisiert in Nacht-, Portrait-, Street- und Landschaftsfotografie."
         ],
-        [
-            picture,
-            "Beschreibung"
-        ],
-        [
-            picture,
-            "Beschreibung"
-        ],
-        [
-            picture,
-            "Beschreibung"
-        ]
     ]
 }
 

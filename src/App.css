@@ -451,11 +451,16 @@ label{
 .contactFormDark > form > input {
   color: #d2fdff;
   border: 2px solid #F4976c;
+  text-wrap: balance;
 }
 
 .contactFormLight > form > input {
   color: #242525;
   border: 2px solid #242525;
+}
+
+.contactFormDark > form{
+  text-wrap: balance;
 }
 
 .submitButton{
