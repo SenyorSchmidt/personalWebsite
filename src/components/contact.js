@@ -3,10 +3,11 @@ import { useLanguage } from "../context/languageProvider"
 import { Formik, useFormik, Form, Field, validateYupSchema } from "formik";
 import { useDarkmode } from "../context/modeProvider";
 import * as Yup from 'yup';
+import emailjs from '@emailjs/browser';
 
 
 // ** TODO: ADD GSAP Animation to component (bars sliding in from the sides, depending on scroll position)
-// ** TODO: Implement EmailJS
+// ** TODO: Figure out way to reset form after submitting
 // ** TODO: Implement handleSubmit for submit button
 
 const formikMessage = {
@@ -57,26 +58,27 @@ const Contact = () => {
     const { language } = useLanguage()
     const { darkmode } = useDarkmode()
 
-
     const handleSubmit = (values) => {
-        console.log(values["name"])
-        console.log(values["email"])
-        console.log(values["subject"])
-        console.log(values["message"])
 
-        {const templateParams = {
-            from_name:  values["name"],
-            from_email: values["email"],
-            subject: values["subject"],
-            to_name: "Waldemar",
-            message: values["message"]
+        const serviceID = "service_y8re3o8"
+        const templateID = "template_msgbb1k"
+        const publicKey = "rol6mmsAOUq2aOpbW"
+
+        {
+            const templateParams = {
+                from_name: values["name"],
+                from_email: values["email"],
+                subject: values["subject"],
+                to_name: "Waldemar",
+                message: values["message"]
+            }
+
+            emailjs.send(serviceID, templateID, templateParams, publicKey).then(() => {
+                alert("One the way")
+            }).catch((error) => {
+                alert("Error")
+            })
         }
-
-        emailjs.send(serviceID, templateID, templateParams, publicKey).then(() => {;
-            formik.resetForm()
-        }).catch((error) => {
-            alert("Error")
-        })}
     }
 
     const validationSchema = Yup.object().shape({
@@ -93,21 +95,6 @@ const Contact = () => {
         message: ""
     }
 
-    const formik = useFormik({
-        initialValues: {
-            name: "",
-            email: "",
-            subject: "",
-            message: ""
-        },
-        validationSchema: Yup.object({
-            name: Yup.string().required(formikMessage[language][0]),
-            email: Yup.string().required(formikMessage[language][1]).email(formikMessage[language][2]),
-            subject: Yup.string().required(formikMessage[language][3]),
-            message: Yup.string().required(formikMessage[language][4]).min(25, formikMessage[language][5])
-        })
-    });
-
     return (
         <div className="container" id={header[language]}>
             <h1 className={`h1${darkmode ? "Dark" : "Light"}`} id={header[language]}>
@@ -118,14 +105,13 @@ const Contact = () => {
                     initialValues={initialValues}
                     validationSchema={validationSchema}
                     onSubmit={handleSubmit}>
-                    {({ values, errors, touched }) => (
+                    {({ errors, touched }) => (
                         <Form>
                             <label htmlFor="name">{labels[language][0]}</label>
                             <Field name="name" />
                             {errors.name && touched.name ? (
                                 <div className="errorMessage">{errors.name}</div>
                             ) : null}
-                            <p>{values.name}</p>
                             <label htmlFor="email">{labels[language][1]}</label>
                             <Field name="email" />
                             {errors.email && touched.email ? (
